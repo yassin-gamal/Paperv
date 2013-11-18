@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NavigationController.h
 //  PaperV
 //
 //  Created by Yassin Gamal on 11/17/13.
@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface NavigationController : UINavigationController
+
 
 @end

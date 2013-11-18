@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62797D0C1839310400A2A57C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62797D0B1839310300A2A57C /* NavigationController.m */; };
 		629A82F418390C7E0075F918 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F318390C7E0075F918 /* Foundation.framework */; };
 		629A82F618390C7E0075F918 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F518390C7E0075F918 /* CoreGraphics.framework */; };
 		629A82F818390C7E0075F918 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F718390C7E0075F918 /* UIKit.framework */; };
@@ -14,7 +15,7 @@
 		629A830018390C7E0075F918 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 629A82FF18390C7E0075F918 /* main.m */; };
 		629A830418390C7E0075F918 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 629A830318390C7E0075F918 /* AppDelegate.m */; };
 		629A830718390C7E0075F918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 629A830518390C7E0075F918 /* Main.storyboard */; };
-		629A830A18390C7E0075F918 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629A830918390C7E0075F918 /* ViewController.m */; };
+		629A830A18390C7E0075F918 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 629A830918390C7E0075F918 /* LoginViewController.m */; };
 		629A830C18390C7E0075F918 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 629A830B18390C7E0075F918 /* Images.xcassets */; };
 		629A831318390C7F0075F918 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A831218390C7F0075F918 /* XCTest.framework */; };
 		629A831418390C7F0075F918 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F318390C7E0075F918 /* Foundation.framework */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		62797D0A1839310300A2A57C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		62797D0B1839310300A2A57C /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		629A82F018390C7E0075F918 /* PaperV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaperV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		629A82F318390C7E0075F918 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		629A82F518390C7E0075F918 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,8 +48,8 @@
 		629A830218390C7E0075F918 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		629A830318390C7E0075F918 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		629A830618390C7E0075F918 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		629A830818390C7E0075F918 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		629A830918390C7E0075F918 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		629A830818390C7E0075F918 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		629A830918390C7E0075F918 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		629A830B18390C7E0075F918 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		629A831118390C7E0075F918 /* PaperVTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PaperVTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		629A831218390C7F0075F918 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -79,6 +82,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62797D0818392EA100A2A57C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				629A830818390C7E0075F918 /* LoginViewController.h */,
+				629A830918390C7E0075F918 /* LoginViewController.m */,
+				62797D0A1839310300A2A57C /* NavigationController.h */,
+				62797D0B1839310300A2A57C /* NavigationController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		62797D0918392EB200A2A57C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				629A830518390C7E0075F918 /* Main.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		629A82E718390C7E0075F918 = {
 			isa = PBXGroup;
 			children = (
@@ -114,9 +136,8 @@
 			children = (
 				629A830218390C7E0075F918 /* AppDelegate.h */,
 				629A830318390C7E0075F918 /* AppDelegate.m */,
-				629A830518390C7E0075F918 /* Main.storyboard */,
-				629A830818390C7E0075F918 /* ViewController.h */,
-				629A830918390C7E0075F918 /* ViewController.m */,
+				62797D0918392EB200A2A57C /* Views */,
+				62797D0818392EA100A2A57C /* Controllers */,
 				629A830B18390C7E0075F918 /* Images.xcassets */,
 				629A82FA18390C7E0075F918 /* Supporting Files */,
 			);
@@ -249,7 +270,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				629A830A18390C7E0075F918 /* ViewController.m in Sources */,
+				629A830A18390C7E0075F918 /* LoginViewController.m in Sources */,
+				62797D0C1839310400A2A57C /* NavigationController.m in Sources */,
 				629A830418390C7E0075F918 /* AppDelegate.m in Sources */,
 				629A830018390C7E0075F918 /* main.m in Sources */,
 			);
@@ -460,6 +482,7 @@
 				629A832418390C7F0075F918 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		629A832518390C7F0075F918 /* Build configuration list for PBXNativeTarget "PaperVTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +491,7 @@
 				629A832718390C7F0075F918 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
