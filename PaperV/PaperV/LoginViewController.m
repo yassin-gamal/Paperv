@@ -13,6 +13,7 @@
 @end
 
 @implementation LoginViewController
+
 @synthesize bottomView;
 @synthesize welcomeLabel;
 @synthesize userNameField;
@@ -22,14 +23,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"BackgroundWelcome"]]];
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]]];
     [bottomView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Bottom"]]];
     
     userNameField.delegate = self;
     passwordField.delegate = self;
     
     passwordField.secureTextEntry = YES;
-
+    
     
 }
 
@@ -47,3 +48,4 @@
 }
 
 @end
+

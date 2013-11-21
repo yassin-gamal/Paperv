@@ -29,13 +29,14 @@
     [super viewDidLoad];
     
     [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0]];
-//    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"Toolbar"] forBarMetrics:UIBarMetricsDefault];
-//    [[UINavigationBar appearance] setShadowImage:[UIImage imageNamed:@"Shade"]];
 
     [self setNeedsStatusBarAppearanceUpdate];
     
-    //self.navigationBar.layer.masksToBounds = NO;
-	// Do any additional setup after loading the view.
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor]}];
+
+    
+    
+    
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
