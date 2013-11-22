@@ -32,6 +32,11 @@
     [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0]];
     
     [self setNeedsStatusBarAppearanceUpdate];
+
+    
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0]];
+
+
 }
 
 

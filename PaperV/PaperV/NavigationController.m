@@ -36,7 +36,20 @@
 
     
     
-    
+    [self performSelector:@selector(hideNavBar) withObject:nil afterDelay:0.0];
+}
+
+
+-(void) hideNavBar {
+    if (self.navigationController.navigationBar.hidden == NO)
+    {
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        
+        // reload view after remove the navigation bar
+        [self loadView];
+        [self viewWillAppear:YES];
+        
+    }
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{

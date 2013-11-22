@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04A591FD183E6F6B00A96F71 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A591FC183E6F6B00A96F71 /* HomeViewController.m */; };
+		04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A72183F468000680D25 /* HomeFeedViewController.m */; };
+		04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A75183F469400680D25 /* ExploreFeedViewController.m */; };
+		04A48A79183F46A600680D25 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A78183F46A600680D25 /* GlideViewController.m */; };
+		04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A7B183F46B500680D25 /* LikesFeedViewController.m */; };
+		04A48A7F183F46C100680D25 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A7E183F46C100680D25 /* ProfileViewController.m */; };
+		04A48A82183F539400680D25 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A81183F539400680D25 /* CustomCell.m */; };
 		04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59204183E7B7800A96F71 /* LoginViewController.m */; };
 		04A59208183E7D6100A96F71 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59207183E7D6100A96F71 /* TabBarViewController.m */; };
-		04A5920B183E817C00A96F71 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5920A183E817C00A96F71 /* ExploreViewController.m */; };
-		04A5920E183E818800A96F71 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A5920D183E818800A96F71 /* GlideViewController.m */; };
-		04A59211183E819200A96F71 /* LikeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59210183E819200A96F71 /* LikeViewController.m */; };
-		04A59214183E81A600A96F71 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59213183E81A600A96F71 /* ProfileViewController.m */; };
 		04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6A79183D5502008789C8 /* RegisterViewController.m */; };
 		62797D0C1839310400A2A57C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62797D0B1839310300A2A57C /* NavigationController.m */; };
 		629A82F418390C7E0075F918 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F318390C7E0075F918 /* Foundation.framework */; };
@@ -42,19 +43,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A591FB183E6F6B00A96F71 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		04A591FC183E6F6B00A96F71 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		04A48A71183F468000680D25 /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
+		04A48A72183F468000680D25 /* HomeFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
+		04A48A74183F469400680D25 /* ExploreFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreFeedViewController.h; sourceTree = "<group>"; };
+		04A48A75183F469400680D25 /* ExploreFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreFeedViewController.m; sourceTree = "<group>"; };
+		04A48A77183F46A600680D25 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
+		04A48A78183F46A600680D25 /* GlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideViewController.m; sourceTree = "<group>"; };
+		04A48A7A183F46B500680D25 /* LikesFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikesFeedViewController.h; sourceTree = "<group>"; };
+		04A48A7B183F46B500680D25 /* LikesFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikesFeedViewController.m; sourceTree = "<group>"; };
+		04A48A7D183F46C100680D25 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		04A48A7E183F46C100680D25 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		04A48A80183F539400680D25 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		04A48A81183F539400680D25 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		04A59204183E7B7800A96F71 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04A59206183E7D6100A96F71 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		04A59207183E7D6100A96F71 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
-		04A59209183E817C00A96F71 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
-		04A5920A183E817C00A96F71 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
-		04A5920C183E818800A96F71 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
-		04A5920D183E818800A96F71 /* GlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideViewController.m; sourceTree = "<group>"; };
-		04A5920F183E819200A96F71 /* LikeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeViewController.h; sourceTree = "<group>"; };
-		04A59210183E819200A96F71 /* LikeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeViewController.m; sourceTree = "<group>"; };
-		04A59212183E81A500A96F71 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		04A59213183E81A600A96F71 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		04FE6A78183D5502008789C8 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		04FE6A79183D5502008789C8 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		62797D0A1839310300A2A57C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
@@ -103,7 +106,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		62797D0818392EA100A2A57C /* Controllers */ = {
+		04A48A6F183F461A00680D25 /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
 				629A830818390C7E0075F918 /* LoginViewController.h */,
@@ -112,18 +115,36 @@
 				62797D0B1839310300A2A57C /* NavigationController.m */,
 				04FE6A78183D5502008789C8 /* RegisterViewController.h */,
 				04FE6A79183D5502008789C8 /* RegisterViewController.m */,
-				04A591FB183E6F6B00A96F71 /* HomeViewController.h */,
-				04A591FC183E6F6B00A96F71 /* HomeViewController.m */,
 				04A59206183E7D6100A96F71 /* TabBarViewController.h */,
 				04A59207183E7D6100A96F71 /* TabBarViewController.m */,
-				04A59209183E817C00A96F71 /* ExploreViewController.h */,
-				04A5920A183E817C00A96F71 /* ExploreViewController.m */,
-				04A5920C183E818800A96F71 /* GlideViewController.h */,
-				04A5920D183E818800A96F71 /* GlideViewController.m */,
-				04A5920F183E819200A96F71 /* LikeViewController.h */,
-				04A59210183E819200A96F71 /* LikeViewController.m */,
-				04A59212183E81A500A96F71 /* ProfileViewController.h */,
-				04A59213183E81A600A96F71 /* ProfileViewController.m */,
+			);
+			name = MainControllers;
+			sourceTree = "<group>";
+		};
+		04A48A70183F465400680D25 /* FeedControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A48A71183F468000680D25 /* HomeFeedViewController.h */,
+				04A48A72183F468000680D25 /* HomeFeedViewController.m */,
+				04A48A74183F469400680D25 /* ExploreFeedViewController.h */,
+				04A48A75183F469400680D25 /* ExploreFeedViewController.m */,
+				04A48A77183F46A600680D25 /* GlideViewController.h */,
+				04A48A78183F46A600680D25 /* GlideViewController.m */,
+				04A48A7A183F46B500680D25 /* LikesFeedViewController.h */,
+				04A48A7B183F46B500680D25 /* LikesFeedViewController.m */,
+				04A48A7D183F46C100680D25 /* ProfileViewController.h */,
+				04A48A7E183F46C100680D25 /* ProfileViewController.m */,
+				04A48A80183F539400680D25 /* CustomCell.h */,
+				04A48A81183F539400680D25 /* CustomCell.m */,
+			);
+			name = FeedControllers;
+			sourceTree = "<group>";
+		};
+		62797D0818392EA100A2A57C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A48A70183F465400680D25 /* FeedControllers */,
+				04A48A6F183F461A00680D25 /* MainControllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -305,17 +326,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A5920B183E817C00A96F71 /* ExploreViewController.m in Sources */,
+				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
+				04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */,
+				04A48A82183F539400680D25 /* CustomCell.m in Sources */,
 				04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */,
 				62797D0C1839310400A2A57C /* NavigationController.m in Sources */,
-				04A59211183E819200A96F71 /* LikeViewController.m in Sources */,
+				04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */,
 				04A59208183E7D6100A96F71 /* TabBarViewController.m in Sources */,
 				629A830418390C7E0075F918 /* AppDelegate.m in Sources */,
+				04A48A79183F46A600680D25 /* GlideViewController.m in Sources */,
+				04A48A7F183F46C100680D25 /* ProfileViewController.m in Sources */,
 				04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */,
-				04A5920E183E818800A96F71 /* GlideViewController.m in Sources */,
-				04A59214183E81A600A96F71 /* ProfileViewController.m in Sources */,
 				629A830018390C7E0075F918 /* main.m in Sources */,
-				04A591FD183E6F6B00A96F71 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
