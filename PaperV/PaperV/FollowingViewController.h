@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FollowingViewController : UIViewController
+@interface FollowingViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end

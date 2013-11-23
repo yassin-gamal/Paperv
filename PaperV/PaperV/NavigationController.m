@@ -32,11 +32,6 @@
 
     [self setNeedsStatusBarAppearanceUpdate];
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor]}];
-    
-
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    
     
     [self performSelector:@selector(hideNavBar) withObject:nil afterDelay:0.0];
 }

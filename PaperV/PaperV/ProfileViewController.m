@@ -36,10 +36,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor]}];
-    
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    
+       
     UIImage *image = [UIImage imageNamed:@"Yehia"];
     [profileAvatar setImage:image];
     profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;

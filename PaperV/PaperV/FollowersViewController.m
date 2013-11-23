@@ -75,6 +75,10 @@
         
     }
     
+    
+    [cell.followButtonText setTitleColor:[UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0] forState:UIControlStateNormal];
+    
+    
     UIImage *image = [UIImage imageNamed:@"Yassin"];
     [cell.friendAvatar setImage:image];
     cell.friendAvatar.layer.cornerRadius = cell.friendAvatar.frame.size.width / 2;

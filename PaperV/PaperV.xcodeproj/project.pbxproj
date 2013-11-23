@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE081840D1470028E6FF /* FollowersViewController.m */; };
 		043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */; };
+		043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0E1840D73C0028E6FF /* FollowingViewController.m */; };
 		04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A72183F468000680D25 /* HomeFeedViewController.m */; };
 		04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A75183F469400680D25 /* ExploreFeedViewController.m */; };
 		04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A7B183F46B500680D25 /* LikesFeedViewController.m */; };
@@ -49,6 +50,8 @@
 		043BAE081840D1470028E6FF /* FollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersViewController.m; sourceTree = "<group>"; };
 		043BAE0A1840D18A0028E6FF /* CustomFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFriendCell.h; sourceTree = "<group>"; };
 		043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFriendCell.m; sourceTree = "<group>"; };
+		043BAE0D1840D73C0028E6FF /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
+		043BAE0E1840D73C0028E6FF /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		04A48A71183F468000680D25 /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
 		04A48A72183F468000680D25 /* HomeFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		04A48A74183F469400680D25 /* ExploreFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreFeedViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				043BAE081840D1470028E6FF /* FollowersViewController.m */,
 				043BAE0A1840D18A0028E6FF /* CustomFriendCell.h */,
 				043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */,
+				043BAE0D1840D73C0028E6FF /* FollowingViewController.h */,
+				043BAE0E1840D73C0028E6FF /* FollowingViewController.m */,
 			);
 			name = FeedControllers;
 			sourceTree = "<group>";
@@ -337,6 +342,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */,
+				043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */,
 				04A76ED8184098A900145914 /* GlideViewController.m in Sources */,
 				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
 				04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */,

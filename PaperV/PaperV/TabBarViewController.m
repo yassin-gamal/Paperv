@@ -28,21 +28,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor]}];
     [self setNeedsStatusBarAppearanceUpdate];
-    
     
     [[UINavigationBar appearance] setBarTintColor: [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0]];
-    
-    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
-    
-    [self setNeedsStatusBarAppearanceUpdate];
-
     
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0]];
 
 
-}
+    [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor]}];
+
+    }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;

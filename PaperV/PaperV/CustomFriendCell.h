@@ -11,4 +11,5 @@
 @interface CustomFriendCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *friendAvatar;
 
+@property (strong, nonatomic) IBOutlet UIButton *followButtonText;
 @end

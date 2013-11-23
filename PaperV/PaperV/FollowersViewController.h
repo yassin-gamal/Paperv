@@ -12,4 +12,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
+
+
+
 @end
