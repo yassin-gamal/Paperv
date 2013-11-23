@@ -7,8 +7,13 @@
 //
 
 #import "LikesFeedViewController.h"
+#import "CustomCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LikesFeedViewController ()
+{
+     NSArray *labelsList;
+}
 
 @end
 
@@ -27,7 +32,7 @@
 {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"Background"]]];
+    labelsList = [[NSArray alloc] initWithObjects:@"Custom Cell 1",@"Custom Cell 2", @"Custom Cell 3", nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -48,20 +53,33 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return labelsList.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil)
+    {
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+    }
+    
+    UIImage *image = [UIImage imageNamed:@"Yehia"];
+    [cell.likesAvatar setImage:image];
+    cell.likesAvatar.layer.cornerRadius = cell.likesAvatar.frame.size.width / 2;
+    cell.likesAvatar.layer.masksToBounds = YES;
+    
+    
     
     // Configure the cell...
     

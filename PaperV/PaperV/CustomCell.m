@@ -11,7 +11,7 @@
 @implementation CustomCell
 
 @synthesize backgroundCellImage;
-@synthesize homeAvatar;
+
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier

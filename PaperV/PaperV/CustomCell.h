@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *homeAvatar;
 @property (strong, nonatomic) IBOutlet UIImageView *exploreAvatar;
+@property (strong, nonatomic) IBOutlet UIImageView *likesAvatar;
 
 @end

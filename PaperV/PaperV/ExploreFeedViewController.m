@@ -8,6 +8,7 @@
 
 #import "ExploreFeedViewController.h"
 #import "CustomCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ExploreFeedViewController ()
 {
