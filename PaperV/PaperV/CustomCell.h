@@ -10,10 +10,11 @@
 
 @interface CustomCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UIImageView *backgroundCellImage;
+
 
 @property (strong, nonatomic) IBOutlet UIImageView *homeAvatar;
 @property (strong, nonatomic) IBOutlet UIImageView *exploreAvatar;
 @property (strong, nonatomic) IBOutlet UIImageView *likesAvatar;
+@property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
 
 @end

@@ -14,6 +14,7 @@
 		04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59204183E7B7800A96F71 /* LoginViewController.m */; };
 		04A59208183E7D6100A96F71 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59207183E7D6100A96F71 /* TabBarViewController.m */; };
 		04A76ED51840984F00145914 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED41840984F00145914 /* ProfileViewController.m */; };
+		04A76ED8184098A900145914 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED7184098A900145914 /* GlideViewController.m */; };
 		04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6A79183D5502008789C8 /* RegisterViewController.m */; };
 		62797D0C1839310400A2A57C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62797D0B1839310300A2A57C /* NavigationController.m */; };
 		629A82F418390C7E0075F918 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F318390C7E0075F918 /* Foundation.framework */; };
@@ -55,6 +56,8 @@
 		04A59207183E7D6100A96F71 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
 		04A76ED31840984F00145914 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		04A76ED41840984F00145914 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		04A76ED6184098A900145914 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
+		04A76ED7184098A900145914 /* GlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideViewController.m; sourceTree = "<group>"; };
 		04FE6A78183D5502008789C8 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		04FE6A79183D5502008789C8 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		62797D0A1839310300A2A57C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				04A48A81183F539400680D25 /* CustomCell.m */,
 				04A76ED31840984F00145914 /* ProfileViewController.h */,
 				04A76ED41840984F00145914 /* ProfileViewController.m */,
+				04A76ED6184098A900145914 /* GlideViewController.h */,
+				04A76ED7184098A900145914 /* GlideViewController.m */,
 			);
 			name = FeedControllers;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A76ED8184098A900145914 /* GlideViewController.m in Sources */,
 				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
 				04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */,
 				04A48A82183F539400680D25 /* CustomCell.m in Sources */,

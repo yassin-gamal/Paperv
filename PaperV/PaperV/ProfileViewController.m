@@ -7,12 +7,23 @@
 //
 
 #import "ProfileViewController.h"
+#import "CustomCell.h"
+#import <QuartzCore/QuartzCore.h>
+
+
 
 @interface ProfileViewController ()
+{
+     NSArray *labelsList;
+}
 
 @end
 
 @implementation ProfileViewController
+
+@synthesize profileAvatar;
+@synthesize myTableView;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +38,18 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UIImage *image = [UIImage imageNamed:@"Yehia"];
+    [profileAvatar setImage:image];
+    profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;
+    profileAvatar.layer.masksToBounds = YES;
+
+    
+    labelsList = [[NSArray alloc] initWithObjects:@"Custom Cell 1",@"Custom Cell 2", @"Custom Cell 3", nil];
+    
+    self.myTableView.dataSource = self;
+    self.myTableView.delegate = self;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -34,5 +57,48 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+
+    // Return the number of sections.
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+
+    // Return the number of rows in the section.
+    return labelsList.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    if (cell == nil)
+    {
+        cell = [[CustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        
+    }
+    
+    UIImage *image = [UIImage imageNamed:@"Yehia"];
+    [cell.profileAvatar setImage:image];
+    cell.profileAvatar.layer.cornerRadius = cell.profileAvatar.frame.size.width / 2;
+    cell.profileAvatar.layer.masksToBounds = YES;
+    
+    
+    
+    // Configure the cell...
+    
+    return cell;
+}
+
+
+
 
 @end

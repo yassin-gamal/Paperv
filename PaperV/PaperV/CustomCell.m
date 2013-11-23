@@ -10,9 +10,6 @@
 
 @implementation CustomCell
 
-@synthesize backgroundCellImage;
-
-
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
