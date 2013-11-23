@@ -11,9 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface LikesFeedViewController ()
-{
-     NSArray *labelsList;
-}
+
 
 @end
 
@@ -32,7 +30,6 @@
 {
     [super viewDidLoad];
     
-    labelsList = [[NSArray alloc] initWithObjects:@"Custom Cell 1",@"Custom Cell 2", @"Custom Cell 3", nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,7 +57,7 @@
 {
 
     // Return the number of rows in the section.
-    return labelsList.count;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

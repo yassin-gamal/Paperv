@@ -12,9 +12,7 @@
 
 
 @interface HomeFeedViewController ()
-{
-    NSArray *labelsList;
-}
+
 
 @end
 
@@ -33,9 +31,6 @@
 {
     [super viewDidLoad];
    
-    
-    labelsList = [[NSArray alloc] initWithObjects:@"Custom Cell 1",@"Custom Cell 2", @"Custom Cell 3", nil];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -60,7 +55,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return labelsList.count;
+    return 5;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

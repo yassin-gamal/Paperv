@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE081840D1470028E6FF /* FollowersViewController.m */; };
+		043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */; };
 		04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A72183F468000680D25 /* HomeFeedViewController.m */; };
 		04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A75183F469400680D25 /* ExploreFeedViewController.m */; };
 		04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A7B183F46B500680D25 /* LikesFeedViewController.m */; };
@@ -43,6 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043BAE071840D1470028E6FF /* FollowersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersViewController.h; sourceTree = "<group>"; };
+		043BAE081840D1470028E6FF /* FollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersViewController.m; sourceTree = "<group>"; };
+		043BAE0A1840D18A0028E6FF /* CustomFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFriendCell.h; sourceTree = "<group>"; };
+		043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFriendCell.m; sourceTree = "<group>"; };
 		04A48A71183F468000680D25 /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
 		04A48A72183F468000680D25 /* HomeFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		04A48A74183F469400680D25 /* ExploreFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreFeedViewController.h; sourceTree = "<group>"; };
@@ -136,6 +142,10 @@
 				04A76ED41840984F00145914 /* ProfileViewController.m */,
 				04A76ED6184098A900145914 /* GlideViewController.h */,
 				04A76ED7184098A900145914 /* GlideViewController.m */,
+				043BAE071840D1470028E6FF /* FollowersViewController.h */,
+				043BAE081840D1470028E6FF /* FollowersViewController.m */,
+				043BAE0A1840D18A0028E6FF /* CustomFriendCell.h */,
+				043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */,
 			);
 			name = FeedControllers;
 			sourceTree = "<group>";
@@ -326,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */,
 				04A76ED8184098A900145914 /* GlideViewController.m in Sources */,
 				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
 				04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */,
@@ -336,6 +347,7 @@
 				04A59208183E7D6100A96F71 /* TabBarViewController.m in Sources */,
 				629A830418390C7E0075F918 /* AppDelegate.m in Sources */,
 				04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */,
+				043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */,
 				04A76ED51840984F00145914 /* ProfileViewController.m in Sources */,
 				629A830018390C7E0075F918 /* main.m in Sources */,
 			);

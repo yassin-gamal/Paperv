@@ -108,6 +108,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="0pw-4H-R7A"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="bottomView" destination="jzP-GS-Kpg" id="S5P-Oo-Vec"/>
                         <outlet property="passwordField" destination="oqM-o5-Y2d" id="mrn-W1-zNY"/>
@@ -196,6 +197,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="NEO-y8-Hip"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="emailField" destination="CcO-F7-hWb" id="yy9-yz-A2v"/>
                         <outlet property="nameField" destination="RjV-FM-Xcq" id="O88-Do-XCa"/>
@@ -327,6 +329,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xZQ-Pk-doo" customClass="NavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="xto-Hc-93f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -352,6 +355,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="lqY-va-YOo" customClass="TabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MKz-jC-oGt"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="b6v-Q9-D1l">
                         <autoresizingMask key="autoresizingMask"/>
@@ -601,6 +605,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cLf-HS-2Iz" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="Home_icon" id="Uwc-P5-Atn"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4hD-z6-H0n">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -620,6 +625,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="acd-TG-oT0" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Explore" image="Explore_icon" id="IMn-iw-jnt"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rb0-VD-zkt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -639,6 +645,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="apY-4n-gcj" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Glide" image="Glide_icon" id="cOp-ui-gtK"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="suo-KN-Wnd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -677,6 +684,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wS3-H4-dBx" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Likes" image="Like_icon" id="tVU-lw-d5J"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="epk-98-stn">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -696,6 +704,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TmU-HS-bCh" customClass="NavigationController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="Profile_icon" id="NXS-sM-lDT"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mK5-Mj-4T0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -776,6 +785,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="rmT-Ld-U5X" kind="push" id="AEZ-KZ-QY7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mB-Oz-lc2">
                                 <rect key="frame" x="175" y="113" width="60" height="21"/>
@@ -798,6 +810,9 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="A5a-kb-ShV" kind="push" id="q9C-n5-dxw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Following" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNM-4A-hYc">
                                 <rect key="frame" x="248" y="113" width="60" height="21"/>
@@ -829,7 +844,7 @@
                                 <rect key="frame" x="240" y="120" width="1" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="8oI-LN-LyW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="350" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="8oI-LN-LyW">
                                 <rect key="frame" x="0.0" y="165" width="320" height="354"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -838,7 +853,7 @@
                                         <rect key="frame" x="0.0" y="1" width="320" height="350"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ut9-gB-1bl" id="Bw4-gm-kiN">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="349"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56f-YB-nxc">
@@ -892,7 +907,7 @@
                                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Tds-Vs-lH3">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Tds-Vs-lH3">
                                                     <rect key="frame" x="15" y="257" width="70" height="70"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
@@ -901,10 +916,10 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Feed_image" translatesAutoresizingMaskIntoConstraints="NO" id="Sdf-PM-GwU">
-                                                    <rect key="frame" x="8" y="41" width="305" height="225"/>
+                                                    <rect key="frame" x="8" y="41" width="305" height="226"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_image3" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-zc-vUr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_image5" translatesAutoresizingMaskIntoConstraints="NO" id="OSm-zc-vUr">
                                                     <rect key="frame" x="27" y="65" width="267" height="178"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -935,6 +950,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="BId-eU-Lkg"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="myTableView" destination="8oI-LN-LyW" id="21g-2A-d6B"/>
                         <outlet property="profileAvatar" destination="ic3-Xn-Vuh" id="UpI-tq-3lo"/>
@@ -944,29 +960,228 @@
             </objects>
             <point key="canvasLocation" x="1774" y="696"/>
         </scene>
+        <!--Followers View Controller - Followers-->
+        <scene sceneID="xNY-12-gTW">
+            <objects>
+                <viewController id="rmT-Ld-U5X" customClass="FollowersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wuQ-q1-6cO"/>
+                        <viewControllerLayoutGuide type="bottom" id="138-Cb-Vnn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cdb-uA-V0n">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x6n-mR-8zk">
+                                <rect key="frame" x="0.0" y="65" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yehia Elsaka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zti-aL-zwB">
+                                <rect key="frame" x="105" y="75" width="200" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="27"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_baner" translatesAutoresizingMaskIntoConstraints="NO" id="Bfa-mX-qo0">
+                                <rect key="frame" x="0.0" y="104" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ui3-9C-06e">
+                                <rect key="frame" x="105" y="120" width="200" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="27"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="TKg-27-nFQ">
+                                <rect key="frame" x="10" y="75" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="ITN-vq-MMP"/>
+                                    <constraint firstAttribute="height" constant="85" id="Mvg-xs-rOG"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LR8-Yu-Iw1">
+                                <rect key="frame" x="0.0" y="168" width="320" height="351"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="FGB-zi-vLA" customClass="CustomFriendCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FGB-zi-vLA" id="hWs-Vx-FYz">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOw-pj-Iyu">
+                                                    <rect key="frame" x="10" y="5" width="300" height="70"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="N4U-tU-O33">
+                                                    <rect key="frame" x="20" y="7" width="65" height="65"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yassin Gamal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z4v-Bk-KUi">
+                                                    <rect key="frame" x="95" y="26" width="130" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                                    <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTK-d1-hld">
+                                                    <rect key="frame" x="250" y="25" width="50" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <state key="normal" title="Follow">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="friendAvatar" destination="N4U-tU-O33" id="1bc-xl-LNB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TKg-27-nFQ" firstAttribute="top" secondItem="wuQ-q1-6cO" secondAttribute="bottom" constant="11" id="NrU-Nx-Vnm"/>
+                            <constraint firstItem="TKg-27-nFQ" firstAttribute="leading" secondItem="cdb-uA-V0n" secondAttribute="leading" constant="10" id="Vto-Sk-pbi"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Followers" id="dyJ-pB-Fsu"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <connections>
+                        <outlet property="myTableView" destination="LR8-Yu-Iw1" id="cJC-o1-OFI"/>
+                        <outlet property="profileAvatar" destination="TKg-27-nFQ" id="tWe-IC-jWD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e4U-2z-XDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="514"/>
+        </scene>
+        <!--View Controller - Following-->
+        <scene sceneID="Hxo-sz-Zl7">
+            <objects>
+                <viewController id="A5a-kb-ShV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="77h-ja-ABm"/>
+                        <viewControllerLayoutGuide type="bottom" id="jOV-sD-E8C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dbQ-F7-gGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYJ-q2-unV">
+                                <rect key="frame" x="0.0" y="65" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cell_baner" translatesAutoresizingMaskIntoConstraints="NO" id="yTp-jj-lRn">
+                                <rect key="frame" x="0.0" y="104" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Followers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juW-SP-g2j">
+                                <rect key="frame" x="100" y="125" width="200" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="27"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yehia Elsaka" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyM-Ty-PYF">
+                                <rect key="frame" x="105" y="75" width="200" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="27"/>
+                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="RlD-bz-XXC">
+                                <rect key="frame" x="10" y="75" width="85" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="XpT-KD-Z6e"/>
+                                    <constraint firstAttribute="width" constant="85" id="bpC-Rb-n5l"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Following" id="xOU-NA-5yB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tsJ-rW-8fV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="1156"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
         <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
+        <image name="Divider" width="1" height="46"/>
         <image name="Divider" width="1" height="46"/>
         <image name="Explore_icon" width="50" height="50"/>
         <image name="Facebook" width="277" height="84"/>
         <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
         <image name="Glide_counter_icon" width="31" height="31"/>
         <image name="Glide_icon" width="52" height="46"/>
+        <image name="Heart_icon" width="34" height="29"/>
+        <image name="Heart_icon" width="34" height="29"/>
+        <image name="Heart_icon" width="34" height="29"/>
         <image name="Heart_icon" width="34" height="29"/>
         <image name="Home_icon" width="44" height="44"/>
         <image name="Like_icon" width="50" height="50"/>
         <image name="LoginBtn" width="560" height="84"/>
         <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
         <image name="Or" width="60" height="60"/>
         <image name="Profile_icon" width="50" height="50"/>
         <image name="RegisterBtn" width="562" height="86"/>
+        <image name="RegisterBtn" width="562" height="86"/>
         <image name="Twitter" width="277" height="84"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
         <image name="cell_baner" width="640" height="240"/>
         <image name="test_image" width="284" height="177"/>
         <image name="test_image2" width="284" height="177"/>
         <image name="test_image3" width="1600" height="1000"/>
+        <image name="test_image5" width="284" height="177"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
