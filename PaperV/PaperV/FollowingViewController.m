@@ -91,4 +91,8 @@
 }
 
 
+- (IBAction)closeFollowing:(id)sender {
+    
+     [self dismissModalViewControllerAnimated:YES];
+}
 @end

@@ -11,5 +11,6 @@
 @interface FollowingViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
+- (IBAction)closeFollowing:(id)sender;
 
 @end

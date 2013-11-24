@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
 
+- (IBAction)closeFollowers:(id)sender;
 
 
 @end

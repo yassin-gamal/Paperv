@@ -15,7 +15,6 @@
 @implementation LoginViewController
 
 @synthesize bottomView;
-@synthesize welcomeLabel;
 @synthesize userNameField;
 @synthesize passwordField;
 

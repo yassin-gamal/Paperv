@@ -92,4 +92,9 @@
 }
 
 
+- (IBAction)closeFollowers:(id)sender {
+    
+    [self dismissModalViewControllerAnimated:YES];
+
+}
 @end

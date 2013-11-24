@@ -12,7 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIView *bottomView;
 
 @property (strong, nonatomic) IBOutlet UITextField *userNameField;
-
 @property (strong, nonatomic) IBOutlet UITextField *passwordField;
-@property (strong, nonatomic) IBOutlet UILabel *welcomeLabel;
+
 @end
