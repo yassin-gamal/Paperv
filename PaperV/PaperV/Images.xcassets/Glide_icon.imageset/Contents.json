@@ -3,16 +3,16 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "ico_glide_2-2.png"
+      "filename" : "glide copy-2.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "ico_glide_2-1.png"
+      "filename" : "glide copy-1.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "ico_glide_2.png",
+      "filename" : "glide copy.png",
       "subtype" : "retina4",
       "scale" : "2x"
     }

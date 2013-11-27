@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ExploreFeedViewController : UITableViewController
+- (IBAction)openSide:(id)sender;
 
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarViewController.h"
 
 @interface HomeFeedViewController : UITableViewController <UITableViewDelegate>
+- (IBAction)openSide:(id)sender;
+
+@property TabBarViewController* homeTabController;
+
+
+
 
 @end

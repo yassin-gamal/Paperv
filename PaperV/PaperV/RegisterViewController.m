@@ -7,6 +7,7 @@
 //
 
 #import "RegisterViewController.h"
+#import "TWTSideMenuViewController.h"
 
 @interface RegisterViewController ()
 
@@ -59,4 +60,11 @@
     return NO;
 }
 
+- (IBAction)register:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
+    
+}
 @end

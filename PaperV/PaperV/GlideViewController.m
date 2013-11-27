@@ -7,6 +7,7 @@
 //
 
 #import "GlideViewController.h"
+#import "TWTSideMenuViewController.h"
 
 @interface GlideViewController ()
 
@@ -35,4 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)openSide:(id)sender {
+    
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 @end

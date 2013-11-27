@@ -7,6 +7,8 @@
 //
 
 #import "LoginViewController.h"
+#import "TabBarViewController.h"
+#import "TWTSideMenuViewController.h"
 
 @interface LoginViewController ()
 
@@ -46,5 +48,28 @@
     return NO;
 }
 
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    // Make sure your segue name in storyboard is the same as this line
+//    if ([[segue identifier] isEqualToString:@"GoToTab"])
+//    {
+//        
+//        // Get reference to the destination view controller
+//        TabBarViewController *tabController = [segue destinationViewController];
+//
+//
+//        //        UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[TWTMainViewController new]];
+//        [self.sideMenuViewController setMainViewController:tabController animated:YES closeMenu:YES];
+//        //
+//        //        // Pass any objects to the view controller here, like...
+//        //        [vc setMyObjectHere:object];
+//    }
+//}
+
+- (IBAction)login:(id)sender {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
+}
 @end
 

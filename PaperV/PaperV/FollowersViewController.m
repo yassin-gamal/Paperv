@@ -37,6 +37,7 @@
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     
+    
     UIImage *image = [UIImage imageNamed:@"Yehia"];
     [profileAvatar setImage:image];
     profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;

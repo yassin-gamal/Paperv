@@ -7,6 +7,7 @@
 //
 
 #import "TabBarViewController.h"
+#import "TWTSideMenuViewController.h"
 
 @interface TabBarViewController ()
 
@@ -26,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    	// Do any additional setup after loading the view.
     
     [self setNeedsStatusBarAppearanceUpdate];
     
@@ -36,7 +37,7 @@
 
 
     [[UINavigationBar appearance] setTitleTextAttributes:@{UITextAttributeTextColor : [UIColor whiteColor]}];
-
+    
     }
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
@@ -50,5 +51,23 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    // Make sure your segue name in storyboard is the same as this line
+//    if ([[segue identifier] isEqualToString:@"GoToTab"])
+//    {
+//        
+//        // Get reference to the destination view controller
+//        TabBarViewController *tabController = [segue destinationViewController];
+//        
+//        //        UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[TWTMainViewController new]];
+//        //        [tabController.sideMenuViewController setMainViewController:tabController animated:YES closeMenu:YES];
+//        //
+//        //        // Pass any objects to the view controller here, like...
+//        //        [vc setMyObjectHere:object];
+//    }
+//}
+
 
 @end

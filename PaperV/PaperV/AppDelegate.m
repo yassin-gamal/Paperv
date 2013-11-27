@@ -7,11 +7,40 @@
 //
 
 #import "AppDelegate.h"
+#import "TWTSideMenuViewController.h"
+#import "SideMenuViewController.h"
+#import "HomeFeedViewController.h"
+@interface AppDelegate ()
+
+@property (nonatomic, strong) TWTSideMenuViewController *sideMenuViewController;
+@property (nonatomic, strong) SideMenuViewController *menuViewController;
+@property (nonatomic, strong) HomeFeedViewController *mainViewController;
+
+@end
+
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    
+    self.menuViewController = [storyboard instantiateViewControllerWithIdentifier:@"SideViewController"];
+    self.mainViewController = [storyboard instantiateViewControllerWithIdentifier:@"MainViewController"];
+
+    
+    self.sideMenuViewController = [[TWTSideMenuViewController alloc] initWithMenuViewController:self.menuViewController mainViewController:self.mainViewController];
+    self.sideMenuViewController.shadowColor = [UIColor blackColor];
+    self.sideMenuViewController.edgeOffset = (UIOffset) { .horizontal = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 18.0f : 0.0f };
+    self.sideMenuViewController.zoomScale = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone ? 0.5634f : 0.85f;
+    self.window.rootViewController = self.sideMenuViewController;
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -42,5 +71,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

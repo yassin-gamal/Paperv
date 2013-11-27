@@ -9,6 +9,7 @@
 #import "LikesFeedViewController.h"
 #import "CustomCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TWTSideMenuViewController.h"
 
 @interface LikesFeedViewController ()
 
@@ -134,4 +135,8 @@
 
  */
 
+- (IBAction)openSide:(id)sender {
+    
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 @end

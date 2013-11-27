@@ -9,6 +9,7 @@
 #import "HomeFeedViewController.h"
 #import "CustomCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TWTSideMenuViewController.h"
 
 
 @interface HomeFeedViewController ()
@@ -29,8 +30,10 @@
 
 - (void)viewDidLoad
 {
+//    [self.sideMenuViewController setMainViewController:self animated:YES closeMenu:YES];
+    
     [super viewDidLoad];
-   
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -132,4 +135,9 @@
 
  */
 
+
+
+- (IBAction)openSide:(id)sender {
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 @end

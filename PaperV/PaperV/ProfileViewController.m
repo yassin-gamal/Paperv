@@ -9,7 +9,7 @@
 #import "ProfileViewController.h"
 #import "CustomCell.h"
 #import <QuartzCore/QuartzCore.h>
-
+#import "TWTSideMenuViewController.h"
 
 
 @interface ProfileViewController ()
@@ -100,4 +100,8 @@
 
 
 
+- (IBAction)openSide:(id)sender {
+    
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 @end

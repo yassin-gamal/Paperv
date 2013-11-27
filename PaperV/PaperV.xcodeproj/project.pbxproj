@@ -10,16 +10,19 @@
 		043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE081840D1470028E6FF /* FollowersViewController.m */; };
 		043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */; };
 		043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0E1840D73C0028E6FF /* FollowingViewController.m */; };
+		04A11C3218457602004091B7 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A11C3118457602004091B7 /* SideMenuViewController.m */; };
 		04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A72183F468000680D25 /* HomeFeedViewController.m */; };
 		04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A75183F469400680D25 /* ExploreFeedViewController.m */; };
 		04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A7B183F46B500680D25 /* LikesFeedViewController.m */; };
 		04A48A82183F539400680D25 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A81183F539400680D25 /* CustomCell.m */; };
 		04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59204183E7B7800A96F71 /* LoginViewController.m */; };
 		04A59208183E7D6100A96F71 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A59207183E7D6100A96F71 /* TabBarViewController.m */; };
+		04A636A21844EBB600480D5A /* TWTSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A636A11844EBB600480D5A /* TWTSideMenuViewController.m */; };
+		04A636AB1844EF0B00480D5A /* SideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A636AA1844EF0B00480D5A /* SideMenuView.m */; };
 		04A76ED51840984F00145914 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED41840984F00145914 /* ProfileViewController.m */; };
 		04A76ED8184098A900145914 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED7184098A900145914 /* GlideViewController.m */; };
 		04C263021842171800950CF1 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C263011842171800950CF1 /* EditProfileViewController.m */; };
-		04C263051842296200950CF1 /* StoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C263041842296200950CF1 /* StoryDetailsViewController.m */; };
+		04FCA09B18461C09003CE6E7 /* StoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCA09A18461C09003CE6E7 /* StoryDetailsViewController.m */; };
 		04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6A79183D5502008789C8 /* RegisterViewController.m */; };
 		62797D0C1839310400A2A57C /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62797D0B1839310300A2A57C /* NavigationController.m */; };
 		629A82F418390C7E0075F918 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629A82F318390C7E0075F918 /* Foundation.framework */; };
@@ -54,6 +57,8 @@
 		043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFriendCell.m; sourceTree = "<group>"; };
 		043BAE0D1840D73C0028E6FF /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
 		043BAE0E1840D73C0028E6FF /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
+		04A11C3018457602004091B7 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
+		04A11C3118457602004091B7 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		04A48A71183F468000680D25 /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
 		04A48A72183F468000680D25 /* HomeFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeFeedViewController.m; sourceTree = "<group>"; };
 		04A48A74183F469400680D25 /* ExploreFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreFeedViewController.h; sourceTree = "<group>"; };
@@ -65,14 +70,18 @@
 		04A59204183E7B7800A96F71 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		04A59206183E7D6100A96F71 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarViewController.h; sourceTree = "<group>"; };
 		04A59207183E7D6100A96F71 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarViewController.m; sourceTree = "<group>"; };
+		04A636A01844EBB600480D5A /* TWTSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTSideMenuViewController.h; sourceTree = "<group>"; };
+		04A636A11844EBB600480D5A /* TWTSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTSideMenuViewController.m; sourceTree = "<group>"; };
+		04A636A91844EF0B00480D5A /* SideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuView.h; sourceTree = "<group>"; };
+		04A636AA1844EF0B00480D5A /* SideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuView.m; sourceTree = "<group>"; };
 		04A76ED31840984F00145914 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		04A76ED41840984F00145914 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		04A76ED6184098A900145914 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
 		04A76ED7184098A900145914 /* GlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideViewController.m; sourceTree = "<group>"; };
 		04C263001842171800950CF1 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		04C263011842171800950CF1 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
-		04C263031842296200950CF1 /* StoryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryDetailsViewController.h; sourceTree = "<group>"; };
-		04C263041842296200950CF1 /* StoryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryDetailsViewController.m; sourceTree = "<group>"; };
+		04FCA09918461C09003CE6E7 /* StoryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryDetailsViewController.h; sourceTree = "<group>"; };
+		04FCA09A18461C09003CE6E7 /* StoryDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryDetailsViewController.m; sourceTree = "<group>"; };
 		04FE6A78183D5502008789C8 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		04FE6A79183D5502008789C8 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		62797D0A1839310300A2A57C /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
@@ -159,10 +168,28 @@
 				043BAE0E1840D73C0028E6FF /* FollowingViewController.m */,
 				04C263001842171800950CF1 /* EditProfileViewController.h */,
 				04C263011842171800950CF1 /* EditProfileViewController.m */,
-				04C263031842296200950CF1 /* StoryDetailsViewController.h */,
-				04C263041842296200950CF1 /* StoryDetailsViewController.m */,
+				04FCA09918461C09003CE6E7 /* StoryDetailsViewController.h */,
+				04FCA09A18461C09003CE6E7 /* StoryDetailsViewController.m */,
 			);
 			name = FeedControllers;
+			sourceTree = "<group>";
+		};
+		04A6369F1844EBB600480D5A /* TWTSideMenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04A636A01844EBB600480D5A /* TWTSideMenuViewController.h */,
+				04A636A11844EBB600480D5A /* TWTSideMenuViewController.m */,
+			);
+			path = TWTSideMenuViewController;
+			sourceTree = "<group>";
+		};
+		04A636A81844EE8400480D5A /* SideMenuControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A11C3018457602004091B7 /* SideMenuViewController.h */,
+				04A11C3118457602004091B7 /* SideMenuViewController.m */,
+			);
+			name = SideMenuControllers;
 			sourceTree = "<group>";
 		};
 		62797D0818392EA100A2A57C /* Controllers */ = {
@@ -170,6 +197,7 @@
 			children = (
 				04A48A70183F465400680D25 /* FeedControllers */,
 				04A48A6F183F461A00680D25 /* MainControllers */,
+				04A636A81844EE8400480D5A /* SideMenuControllers */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				629A830518390C7E0075F918 /* Main.storyboard */,
+				04A636A91844EF0B00480D5A /* SideMenuView.h */,
+				04A636AA1844EF0B00480D5A /* SideMenuView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -218,6 +248,7 @@
 				629A830218390C7E0075F918 /* AppDelegate.h */,
 				629A830318390C7E0075F918 /* AppDelegate.m */,
 				62797D0918392EB200A2A57C /* Views */,
+				04A6369F1844EBB600480D5A /* TWTSideMenuViewController */,
 				62797D0818392EA100A2A57C /* Controllers */,
 				629A830B18390C7E0075F918 /* Images.xcassets */,
 				629A82FA18390C7E0075F918 /* Supporting Files */,
@@ -351,8 +382,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A11C3218457602004091B7 /* SideMenuViewController.m in Sources */,
+				04A636A21844EBB600480D5A /* TWTSideMenuViewController.m in Sources */,
+				04A636AB1844EF0B00480D5A /* SideMenuView.m in Sources */,
 				043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */,
 				043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */,
+				04FCA09B18461C09003CE6E7 /* StoryDetailsViewController.m in Sources */,
 				04A76ED8184098A900145914 /* GlideViewController.m in Sources */,
 				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
 				04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */,
@@ -364,7 +399,6 @@
 				629A830418390C7E0075F918 /* AppDelegate.m in Sources */,
 				04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */,
 				04C263021842171800950CF1 /* EditProfileViewController.m in Sources */,
-				04C263051842296200950CF1 /* StoryDetailsViewController.m in Sources */,
 				043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */,
 				04A76ED51840984F00145914 /* ProfileViewController.m in Sources */,
 				629A830018390C7E0075F918 /* main.m in Sources */,

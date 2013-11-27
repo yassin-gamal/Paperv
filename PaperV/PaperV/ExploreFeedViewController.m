@@ -9,6 +9,7 @@
 #import "ExploreFeedViewController.h"
 #import "CustomCell.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TWTSideMenuViewController.h"
 
 @interface ExploreFeedViewController ()
 
@@ -133,4 +134,8 @@
  
  */
 
+- (IBAction)openSide:(id)sender {
+    
+    [self.sideMenuViewController openMenuAnimated:YES completion:nil];
+}
 @end

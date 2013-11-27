@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface GlideViewController : UIViewController
+- (IBAction)openSide:(id)sender;
 
 @end

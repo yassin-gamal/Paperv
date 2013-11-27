@@ -13,5 +13,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *emailField;
 @property (strong, nonatomic) IBOutlet UITextField *passField;
 @property (strong, nonatomic) IBOutlet UITextField *repeatPassField;
+- (IBAction)register:(id)sender;
 
 @end

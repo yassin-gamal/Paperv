@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
+- (IBAction)openSide:(id)sender;
 
 @end
