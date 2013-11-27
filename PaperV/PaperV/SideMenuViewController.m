@@ -44,6 +44,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
