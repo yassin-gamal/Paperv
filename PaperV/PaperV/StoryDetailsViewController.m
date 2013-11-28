@@ -11,6 +11,9 @@
 
 @interface StoryDetailsViewController ()
 
+@property (nonatomic, strong) NSMutableArray *images;
+
+
 @end
 
 @implementation StoryDetailsViewController
@@ -18,14 +21,38 @@
 @synthesize header;
 @synthesize footer;
 
+
+@synthesize carousel = _carousel;
+@synthesize images = _images;
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+      
     }
     return self;
 }
+
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    if ( !(self = [super initWithCoder:aDecoder]) ) return nil;
+    
+    
+    NSArray *anArray = [NSArray arrayWithObjects:
+                        [UIImage imageNamed:@"test_image.png"],
+                        [UIImage imageNamed:@"test_image2.png"],
+                        [UIImage imageNamed:@"test_image3.png"],
+                        [UIImage imageNamed:@"test_image4.png"],
+                        [UIImage imageNamed:@"test_image5.png"],
+                        nil];
+    
+    _images = [anArray copy];
+    
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
@@ -33,12 +60,59 @@
     
     header.backgroundColor = [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0];
     
+    
+    
+       //configure carousel
+    _carousel.type = iCarouselTypeCoverFlow2;
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
+
+- (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
+{
+    return [_images count];
+}
+
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
+{
+    
+    //create new view if no view is available for recycling
+    if (view == nil)
+    {
+        FXImageView *imageView = [[FXImageView alloc] initWithFrame:CGRectMake(0, 0, 250.0f, 250.0f)];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.asynchronous = YES;
+        imageView.reflectionScale = 0.20f;
+        imageView.reflectionAlpha = 0.50f;
+        imageView.reflectionGap = 1.0f;
+        imageView.shadowOffset = CGSizeMake(0.0f, 2.0f);
+        imageView.shadowBlur = 5.0f;
+        imageView.cornerRadius = 0.0f;
+        view = imageView;
+    }
+    
+    //show placeholder
+//    ((FXImageView *)view).processedImage = [UIImage imageNamed:@"placeholder.png"];
+    
+    //set image
+    ((FXImageView *)view).image = _images[index];
+    
+    return view;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;

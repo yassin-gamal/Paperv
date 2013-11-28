@@ -21,6 +21,11 @@
 		04A636AB1844EF0B00480D5A /* SideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A636AA1844EF0B00480D5A /* SideMenuView.m */; };
 		04A76ED51840984F00145914 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED41840984F00145914 /* ProfileViewController.m */; };
 		04A76ED8184098A900145914 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED7184098A900145914 /* GlideViewController.m */; };
+		04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0C81847849E0052CA07 /* iCarousel.m */; };
+		04A8C0E6184785A80052CA07 /* FXImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0E3184785A80052CA07 /* FXImageView.m */; };
+		04A8C0E7184785A80052CA07 /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0E5184785A80052CA07 /* UIImage+FX.m */; };
+		04A8C0F218479CC00052CA07 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A8C0F018479CC00052CA07 /* background.png */; };
+		04A8C0F318479CC00052CA07 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A8C0F118479CC00052CA07 /* placeholder.png */; };
 		04C263021842171800950CF1 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C263011842171800950CF1 /* EditProfileViewController.m */; };
 		04FCA09B18461C09003CE6E7 /* StoryDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FCA09A18461C09003CE6E7 /* StoryDetailsViewController.m */; };
 		04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FE6A79183D5502008789C8 /* RegisterViewController.m */; };
@@ -78,6 +83,14 @@
 		04A76ED41840984F00145914 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		04A76ED6184098A900145914 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
 		04A76ED7184098A900145914 /* GlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideViewController.m; sourceTree = "<group>"; };
+		04A8C0C71847849E0052CA07 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		04A8C0C81847849E0052CA07 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		04A8C0E2184785A80052CA07 /* FXImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXImageView.h; sourceTree = "<group>"; };
+		04A8C0E3184785A80052CA07 /* FXImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXImageView.m; sourceTree = "<group>"; };
+		04A8C0E4184785A80052CA07 /* UIImage+FX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FX.h"; sourceTree = "<group>"; };
+		04A8C0E5184785A80052CA07 /* UIImage+FX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FX.m"; sourceTree = "<group>"; };
+		04A8C0F018479CC00052CA07 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		04A8C0F118479CC00052CA07 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		04C263001842171800950CF1 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
 		04C263011842171800950CF1 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 		04FCA09918461C09003CE6E7 /* StoryDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryDetailsViewController.h; sourceTree = "<group>"; };
@@ -192,6 +205,44 @@
 			name = SideMenuControllers;
 			sourceTree = "<group>";
 		};
+		04A8C0C5184783F10052CA07 /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				04A8C0E1184785880052CA07 /* FXImageView */,
+				04A8C0C61847849E0052CA07 /* iCarousel */,
+			);
+			name = Carousel;
+			sourceTree = "<group>";
+		};
+		04A8C0C61847849E0052CA07 /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				04A8C0C71847849E0052CA07 /* iCarousel.h */,
+				04A8C0C81847849E0052CA07 /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		04A8C0E1184785880052CA07 /* FXImageView */ = {
+			isa = PBXGroup;
+			children = (
+				04A8C0E2184785A80052CA07 /* FXImageView.h */,
+				04A8C0E3184785A80052CA07 /* FXImageView.m */,
+				04A8C0E4184785A80052CA07 /* UIImage+FX.h */,
+				04A8C0E5184785A80052CA07 /* UIImage+FX.m */,
+			);
+			name = FXImageView;
+			sourceTree = "<group>";
+		};
+		04A8C0EF18479CA50052CA07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04A8C0F018479CC00052CA07 /* background.png */,
+				04A8C0F118479CC00052CA07 /* placeholder.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		62797D0818392EA100A2A57C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +296,8 @@
 		629A82F918390C7E0075F918 /* PaperV */ = {
 			isa = PBXGroup;
 			children = (
+				04A8C0EF18479CA50052CA07 /* Resources */,
+				04A8C0C5184783F10052CA07 /* Carousel */,
 				629A830218390C7E0075F918 /* AppDelegate.h */,
 				629A830318390C7E0075F918 /* AppDelegate.m */,
 				62797D0918392EB200A2A57C /* Views */,
@@ -361,7 +414,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A8C0F218479CC00052CA07 /* background.png in Resources */,
 				629A830C18390C7E0075F918 /* Images.xcassets in Resources */,
+				04A8C0F318479CC00052CA07 /* placeholder.png in Resources */,
 				629A82FE18390C7E0075F918 /* InfoPlist.strings in Resources */,
 				629A830718390C7E0075F918 /* Main.storyboard in Resources */,
 			);
@@ -383,17 +438,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A11C3218457602004091B7 /* SideMenuViewController.m in Sources */,
+				04A8C0E7184785A80052CA07 /* UIImage+FX.m in Sources */,
 				04A636A21844EBB600480D5A /* TWTSideMenuViewController.m in Sources */,
 				04A636AB1844EF0B00480D5A /* SideMenuView.m in Sources */,
 				043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */,
 				043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */,
 				04FCA09B18461C09003CE6E7 /* StoryDetailsViewController.m in Sources */,
+				04A8C0E6184785A80052CA07 /* FXImageView.m in Sources */,
 				04A76ED8184098A900145914 /* GlideViewController.m in Sources */,
 				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
 				04A48A7C183F46B500680D25 /* LikesFeedViewController.m in Sources */,
 				04A48A82183F539400680D25 /* CustomCell.m in Sources */,
 				04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */,
 				62797D0C1839310400A2A57C /* NavigationController.m in Sources */,
+				04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */,
 				04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */,
 				04A59208183E7D6100A96F71 /* TabBarViewController.m in Sources */,
 				629A830418390C7E0075F918 /* AppDelegate.m in Sources */,

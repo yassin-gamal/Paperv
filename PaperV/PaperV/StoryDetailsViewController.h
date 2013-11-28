@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCarousel.h"
+#import "FXImageView.h"
 
-@interface StoryDetailsViewController : UITableViewController
+@interface StoryDetailsViewController : UITableViewController<iCarouselDataSource>
+
 - (IBAction)closeStory:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *header;
 @property (strong, nonatomic) IBOutlet UILabel *footer;
+
+
+@property (strong, nonatomic) IBOutlet iCarousel *carousel;
 
 @end
