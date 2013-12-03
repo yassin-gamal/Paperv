@@ -41,6 +41,23 @@
     passField.delegate = self;
     repeatPassField.delegate = self;
     
+    UIView *namePaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    nameField.leftView = namePaddingView;
+    nameField.leftViewMode = UITextFieldViewModeAlways;
+    
+    
+    UIView *emailPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    emailField.leftView = emailPaddingView;
+    emailField.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *passPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    passField.leftView = passPaddingView;
+    passField.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *repPassPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    repeatPassField.leftView = repPassPaddingView;
+    repeatPassField.leftViewMode = UITextFieldViewModeAlways;
+    
     passField.secureTextEntry = YES;
     repeatPassField.secureTextEntry = YES;
     
@@ -60,11 +77,42 @@
     return NO;
 }
 
+
+
+
 - (IBAction)register:(id)sender {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
     [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
     
+}
+
+
+// move the textField above the keyboar
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+}
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    const int movementDistance = 120; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? -movementDistance : movementDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
 }
 @end

@@ -30,6 +30,14 @@
     userNameField.delegate = self;
     passwordField.delegate = self;
     
+    UIView *namePaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    userNameField.leftView = namePaddingView;
+    userNameField.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *passPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    passwordField.leftView = passPaddingView;
+    passwordField.leftViewMode = UITextFieldViewModeAlways;
+    
     passwordField.secureTextEntry = YES;
     
     
@@ -48,23 +56,6 @@
     return NO;
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    // Make sure your segue name in storyboard is the same as this line
-//    if ([[segue identifier] isEqualToString:@"GoToTab"])
-//    {
-//        
-//        // Get reference to the destination view controller
-//        TabBarViewController *tabController = [segue destinationViewController];
-//
-//
-//        //        UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:[TWTMainViewController new]];
-//        [self.sideMenuViewController setMainViewController:tabController animated:YES closeMenu:YES];
-//        //
-//        //        // Pass any objects to the view controller here, like...
-//        //        [vc setMyObjectHere:object];
-//    }
-//}
 
 - (IBAction)login:(id)sender {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];

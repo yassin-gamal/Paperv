@@ -39,6 +39,19 @@
     
     passwordField.secureTextEntry = YES;
     
+    UIView *namePaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    userNameField.leftView = namePaddingView;
+    userNameField.leftViewMode = UITextFieldViewModeAlways;
+    
+    
+    UIView *emailPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    emailField.leftView = emailPaddingView;
+    emailField.leftViewMode = UITextFieldViewModeAlways;
+    
+    UIView *passPaddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    passwordField.leftView = passPaddingView;
+    passwordField.leftViewMode = UITextFieldViewModeAlways;
+    
     
     UIImage *image = [UIImage imageNamed:@"Yehia"];
     [avatar setImage:image];
@@ -65,4 +78,33 @@
     
     [self dismissModalViewControllerAnimated:YES];
 }
+
+
+// move the textField above the keyboar
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: YES];
+}
+
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+}
+
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    const int movementDistance = 160; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    
+    int movement = (up ? -movementDistance : movementDistance);
+    
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
+
 @end

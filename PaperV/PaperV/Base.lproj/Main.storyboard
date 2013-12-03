@@ -56,7 +56,7 @@
                                     <constraint firstAttribute="width" constant="320" id="txN-8K-6re"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="   *****" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-o5-Y2d">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" placeholder="*****" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="oqM-o5-Y2d">
                                 <rect key="frame" x="20" y="240" width="280" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -66,7 +66,7 @@
                                 <attributedString key="attributedText"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="txK-x2-Uh8">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="txK-x2-Uh8">
                                 <rect key="frame" x="20" y="190" width="280" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -153,7 +153,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Your Name" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-FM-Xcq">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="RjV-FM-Xcq">
                                 <rect key="frame" x="20" y="212" width="280" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -163,7 +163,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-F7-hWb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="CcO-F7-hWb">
                                 <rect key="frame" x="20" y="262" width="280" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -173,7 +173,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="t9b-FY-LXF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="t9b-FY-LXF">
                                 <rect key="frame" x="20" y="312" width="280" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -183,7 +183,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Repeat Password" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="j04-3o-7o5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Repeat Password" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="j04-3o-7o5">
                                 <rect key="frame" x="20" y="362" width="280" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
@@ -842,10 +842,14 @@
                             <rect key="frame" x="0.0" y="471" width="320" height="65"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9I-Sc-hNF">
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9I-Sc-hNF">
                                     <rect key="frame" x="0.0" y="5" width="320" height="60"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="Amd-Oe-Aqe"/>
+                                        <constraint firstAttribute="width" constant="320" id="Chs-2s-nPt"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
@@ -857,7 +861,7 @@
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Write a comment ..." clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="RQ1-DA-Xjm">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write a comment ..." clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="RQ1-DA-Xjm">
                                     <rect key="frame" x="10" y="12" width="250" height="45"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -866,6 +870,10 @@
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="e9I-Sc-hNF" secondAttribute="bottom" id="Mbo-bX-eIY"/>
+                                <constraint firstItem="e9I-Sc-hNF" firstAttribute="leading" secondItem="NeL-b3-Qkl" secondAttribute="leading" id="hJD-wi-BTZ"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="aeq-PJ-OeY" customClass="CustomFriendCell">
@@ -942,6 +950,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="carousel" destination="oaf-lE-pTp" id="4XK-At-sXB"/>
+                        <outlet property="comment" destination="RQ1-DA-Xjm" id="wW1-Fs-aOE"/>
                         <outlet property="footer" destination="e9I-Sc-hNF" id="MUe-uR-jVM"/>
                         <outlet property="header" destination="vVi-xF-nFW" id="X8t-LW-0hF"/>
                     </connections>
@@ -1338,7 +1347,167 @@
                     <view key="view" contentMode="scaleToFill" id="TFK-6n-2A0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1u-TA-CmA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-5f-ORC">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="765"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="4m3-88-xfs">
+                                                <rect key="frame" x="20" y="15" width="100" height="100"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Glide Your Story" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKp-Hj-4pq">
+                                                <rect key="frame" x="120" y="54" width="180" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="21"/>
+                                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Story Title" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nnt-ML-nMA">
+                                                <rect key="frame" x="20" y="116" width="280" height="42"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="280" id="Gg3-pa-tPk"/>
+                                                    <constraint firstAttribute="height" constant="42" id="U8F-MP-mdq"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="21"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whC-Nn-NCx">
+                                                <rect key="frame" x="100" y="173" width="120" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="19"/>
+                                                <state key="normal" title="Category ?">
+                                                    <color key="titleColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showActionSheet:" destination="WRB-fY-0aO" eventType="touchUpInside" id="KhU-fG-Lve"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LLu-Yl-3TN">
+                                                <rect key="frame" x="10" y="215" width="300" height="60"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdP-0B-Uq3">
+                                                        <rect key="frame" x="11" y="5" width="135" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="EQd-cF-8aB">
+                                                        <rect key="frame" x="13" y="10" width="40" height="38"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8y-vY-Uwk">
+                                                        <rect key="frame" x="51" y="20" width="90" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                                        <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eei-HH-sz3">
+                                                        <rect key="frame" x="154" y="6" width="135" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <state key="normal">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Vedio" translatesAutoresizingMaskIntoConstraints="NO" id="aE3-by-Pnh">
+                                                        <rect key="frame" x="160" y="15" width="30" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Video" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RcH-hV-UkP">
+                                                        <rect key="frame" x="195" y="20" width="90" height="21"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                                        <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Divider" translatesAutoresizingMaskIntoConstraints="NO" id="6zt-uE-cKh">
+                                                        <rect key="frame" x="147" y="8" width="2" height="45"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="300" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="GfO-7O-2Mo">
+                                                <rect key="frame" x="10" y="283" width="300" height="280"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <prototypes>
+                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="280" id="k2h-r2-iFT" customClass="CustomCell">
+                                                        <rect key="frame" x="0.0" y="1" width="300" height="280"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k2h-r2-iFT" id="0ki-t8-3Do">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="280"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Feed_image" translatesAutoresizingMaskIntoConstraints="NO" id="DQt-VF-DHM">
+                                                                    <rect key="frame" x="8" y="23" width="285" height="185"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </imageView>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_image2" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-ms-0Dl">
+                                                                    <rect key="frame" x="39" y="42" width="222" height="147"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </imageView>
+                                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="   Image Caption" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eB0-SZ-XCQ">
+                                                                    <rect key="frame" x="35" y="216" width="230" height="30"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
+                                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                                </textField>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJH-Tr-zP2">
+                                                <rect key="frame" x="80" y="590" width="170" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="23"/>
+                                                <state key="normal" title="   Glide it ..." image="Glide_icon" backgroundImage="Button">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="4m3-88-xfs" firstAttribute="leading" secondItem="A1y-5f-ORC" secondAttribute="leading" constant="20" id="19z-qG-rxV"/>
+                                            <constraint firstItem="Nnt-ML-nMA" firstAttribute="leading" secondItem="A1y-5f-ORC" secondAttribute="leading" constant="20" id="904-b2-DA9"/>
+                                            <constraint firstItem="Nnt-ML-nMA" firstAttribute="top" secondItem="4m3-88-xfs" secondAttribute="bottom" constant="1" id="LIe-YR-WFe"/>
+                                            <constraint firstAttribute="height" constant="720" id="T8O-A2-46L"/>
+                                            <constraint firstItem="4m3-88-xfs" firstAttribute="top" secondItem="A1y-5f-ORC" secondAttribute="top" constant="15" id="hKb-OL-OB1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="5QO-0E-AiT"/>
+                                    <constraint firstAttribute="bottom" secondItem="A1y-5f-ORC" secondAttribute="bottom" id="Gfs-HP-Ldk"/>
+                                    <constraint firstItem="A1y-5f-ORC" firstAttribute="centerX" secondItem="G1u-TA-CmA" secondAttribute="centerX" id="Qk2-zB-zw4"/>
+                                    <constraint firstItem="A1y-5f-ORC" firstAttribute="leading" secondItem="G1u-TA-CmA" secondAttribute="leading" id="Qub-gl-yRy"/>
+                                    <constraint firstAttribute="width" constant="320" id="aFM-v7-zAN"/>
+                                    <constraint firstItem="A1y-5f-ORC" firstAttribute="top" secondItem="G1u-TA-CmA" secondAttribute="top" id="evA-H7-Ghf"/>
+                                    <constraint firstAttribute="trailing" secondItem="A1y-5f-ORC" secondAttribute="trailing" id="iIP-eu-m77"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G1u-TA-CmA" firstAttribute="top" secondItem="TFK-6n-2A0" secondAttribute="top" id="Dym-Td-qZt"/>
+                            <constraint firstItem="G1u-TA-CmA" firstAttribute="leading" secondItem="TFK-6n-2A0" secondAttribute="leading" id="dEM-hW-JHo"/>
+                            <constraint firstItem="G1u-TA-CmA" firstAttribute="leading" secondItem="TFK-6n-2A0" secondAttribute="leading" id="lr0-0b-j9X"/>
+                            <constraint firstItem="G1u-TA-CmA" firstAttribute="top" secondItem="TFK-6n-2A0" secondAttribute="top" id="x4R-RT-fFP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Glide" id="k8M-Tw-9zC">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="pFe-aN-dOG">
@@ -1355,6 +1524,11 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="myScrollView" destination="G1u-TA-CmA" id="y06-U2-wuC"/>
+                        <outlet property="myTableView" destination="GfO-7O-2Mo" id="IBn-ws-7eJ"/>
+                        <outlet property="storyTitleField" destination="Nnt-ML-nMA" id="nkp-Dr-ejL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSV-jB-aPR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1815,7 +1989,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Your Name" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-iK-YOF">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-iK-YOF">
                                         <rect key="frame" x="20" y="203" width="280" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -1827,7 +2001,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Email" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="IXN-3w-wV0">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="IXN-3w-wV0">
                                         <rect key="frame" x="20" y="256" width="280" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -1839,7 +2013,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="   Password" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Mp-TEc">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="4aU-Mp-TEc">
                                         <rect key="frame" x="20" y="307" width="280" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <constraints>
@@ -2172,42 +2346,114 @@
     <resources>
         <image name="About" width="28" height="35"/>
         <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Avatar" width="215" height="220"/>
+        <image name="Button" width="110" height="54"/>
+        <image name="Camera" width="128" height="128"/>
         <image name="CameraBtn" width="230" height="230"/>
         <image name="CircularHeart" width="35" height="35"/>
         <image name="Close" width="37" height="37"/>
+        <image name="Close" width="37" height="37"/>
+        <image name="Close" width="37" height="37"/>
         <image name="Comment_1" width="36" height="36"/>
         <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
+        <image name="Comment_icon" width="40" height="36"/>
         <image name="Contact" width="32" height="32"/>
+        <image name="Divider" width="1" height="46"/>
+        <image name="Divider" width="1" height="46"/>
         <image name="Divider" width="1" height="46"/>
         <image name="Edit" width="48" height="48"/>
         <image name="Explore_icon" width="50" height="50"/>
         <image name="Facebook" width="277" height="84"/>
         <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Feed_image" width="360" height="265"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
+        <image name="Glide_counter_icon" width="31" height="31"/>
         <image name="Glide_counter_icon" width="31" height="31"/>
         <image name="Glide_icon" width="48" height="48"/>
+        <image name="Glide_icon" width="48" height="48"/>
+        <image name="Heart_icon" width="34" height="29"/>
+        <image name="Heart_icon" width="34" height="29"/>
+        <image name="Heart_icon" width="34" height="29"/>
+        <image name="Heart_icon" width="34" height="29"/>
         <image name="Heart_icon" width="34" height="29"/>
         <image name="Home_icon" width="48" height="48"/>
         <image name="Like_icon" width="50" height="50"/>
         <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
+        <image name="Line" width="350" height="1"/>
         <image name="LoginBtn" width="560" height="84"/>
         <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
+        <image name="LoginField" width="560" height="85"/>
         <image name="Logout" width="31" height="35"/>
+        <image name="Menu" width="36" height="36"/>
+        <image name="Menu" width="36" height="36"/>
+        <image name="Menu" width="36" height="36"/>
+        <image name="Menu" width="36" height="36"/>
         <image name="Menu" width="36" height="36"/>
         <image name="Notification" width="31" height="32"/>
         <image name="Or" width="60" height="60"/>
         <image name="PaperV" width="456" height="131"/>
+        <image name="PaperV" width="456" height="131"/>
+        <image name="PaperV_2" width="1000" height="1000"/>
         <image name="PaperV_2" width="1000" height="1000"/>
         <image name="Privacy" width="36" height="27"/>
         <image name="Profile_icon" width="50" height="50"/>
         <image name="RegisterBtn" width="562" height="86"/>
+        <image name="RegisterBtn" width="562" height="86"/>
         <image name="Search" width="23" height="23"/>
         <image name="SideHome" width="48" height="48"/>
         <image name="TakeImageBtn" width="232" height="68"/>
+        <image name="TakeImageBtn" width="232" height="68"/>
         <image name="Terms" width="31" height="31"/>
         <image name="Twitter" width="277" height="84"/>
+        <image name="Vedio" width="128" height="128"/>
         <image name="WhiteClose" width="37" height="37"/>
         <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
+        <image name="cell_baner" width="640" height="240"/>
         <image name="test_image" width="284" height="177"/>
+        <image name="test_image2" width="284" height="177"/>
         <image name="test_image2" width="284" height="177"/>
         <image name="test_image3" width="1600" height="1000"/>
         <image name="test_image5" width="284" height="177"/>

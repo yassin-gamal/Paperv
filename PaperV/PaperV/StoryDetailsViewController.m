@@ -21,6 +21,7 @@
 @synthesize header;
 @synthesize footer;
 
+@synthesize comment;
 
 @synthesize carousel = _carousel;
 @synthesize images = _images;
@@ -60,7 +61,12 @@
     
     header.backgroundColor = [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0];
     
+    comment.delegate = self;
     
+    UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    comment.leftView = paddingView;
+    comment.leftViewMode = UITextFieldViewModeAlways;
+
     
        //configure carousel
     _carousel.type = iCarouselTypeCoverFlow2;
@@ -73,6 +79,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [comment resignFirstResponder];
+    return NO;
+}
 
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel

@@ -10,7 +10,7 @@
 #import "iCarousel.h"
 #import "FXImageView.h"
 
-@interface StoryDetailsViewController : UITableViewController<iCarouselDataSource>
+@interface StoryDetailsViewController : UITableViewController<iCarouselDataSource, UITextFieldDelegate>
 
 - (IBAction)closeStory:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *header;
@@ -18,5 +18,6 @@
 
 
 @property (strong, nonatomic) IBOutlet iCarousel *carousel;
+@property (strong, nonatomic) IBOutlet UITextField *comment;
 
 @end
