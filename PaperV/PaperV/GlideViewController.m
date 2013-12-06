@@ -23,6 +23,8 @@
 @synthesize myTableView;
 @synthesize storyTitleField;
 
+@synthesize avatar;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -54,6 +56,10 @@
     myPicker.delegate = self;
     myPicker.dataSource = self;
     
+    UIImage *image = [UIImage imageNamed:@"Yehia"];
+    [avatar setImage:image];
+    avatar.layer.cornerRadius = avatar.frame.size.width / 2;
+    avatar.layer.masksToBounds = YES;
     
 }
 

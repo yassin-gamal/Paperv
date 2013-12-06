@@ -10,6 +10,8 @@
 #import "iCarousel.h"
 #import "FXImageView.h"
 
+#import "StoryDetailsModel.h"
+
 @interface StoryDetailsViewController : UITableViewController<iCarouselDataSource, UITextFieldDelegate>
 
 - (IBAction)closeStory:(id)sender;
@@ -18,6 +20,19 @@
 
 
 @property (strong, nonatomic) IBOutlet iCarousel *carousel;
-@property (strong, nonatomic) IBOutlet UITextField *comment;
+@property (strong, nonatomic) IBOutlet UITextField *commentField;
+@property (strong, nonatomic) IBOutlet UIImageView *avatar;
+
+@property (strong, nonatomic) IBOutlet UILabel *storyTitle;
+@property (strong, nonatomic) IBOutlet UILabel *storyOwner;
+@property (strong, nonatomic) IBOutlet UILabel *totalLike;
+@property (strong, nonatomic) IBOutlet UILabel *totlaRepost;
+
+@property (strong, nonatomic) IBOutlet UILabel *totalComment;
+
+
+
+@property NSString *storyID;
+@property StoryDetailsModel *story;
 
 @end

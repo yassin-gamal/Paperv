@@ -10,6 +10,10 @@
 
 @implementation CustomFriendCell
 
+@synthesize friendAvatar;
+@synthesize comment;
+@synthesize commentOwner;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

@@ -12,4 +12,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *friendAvatar;
 
 @property (strong, nonatomic) IBOutlet UIButton *followButtonText;
+
+@property (strong, nonatomic) IBOutlet UILabel *commentOwner;
+@property (strong, nonatomic) IBOutlet UILabel *comment;
+
 @end

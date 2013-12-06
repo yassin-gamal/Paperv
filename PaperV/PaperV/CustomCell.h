@@ -10,11 +10,15 @@
 
 @interface CustomCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *storyPhoto;
 
+@property (strong, nonatomic) IBOutlet UIImageView *storyOwnerAvatar;
 
-@property (strong, nonatomic) IBOutlet UIImageView *homeAvatar;
-@property (strong, nonatomic) IBOutlet UIImageView *exploreAvatar;
-@property (strong, nonatomic) IBOutlet UIImageView *likesAvatar;
-@property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
+@property (strong, nonatomic) IBOutlet UILabel *storyTitle;
+
+@property (strong, nonatomic) IBOutlet UILabel *storyOwnerName;
+@property (strong, nonatomic) IBOutlet UILabel *totalLike;
+@property (strong, nonatomic) IBOutlet UILabel *totalRepost;
+@property (strong, nonatomic) IBOutlet UILabel *totalComment;
 
 @end

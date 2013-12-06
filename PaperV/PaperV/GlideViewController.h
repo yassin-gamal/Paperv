@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *myPicker;
 
 @property (strong, nonatomic)NSArray *colorArray;
+@property (strong, nonatomic) IBOutlet UIImageView *avatar;
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 

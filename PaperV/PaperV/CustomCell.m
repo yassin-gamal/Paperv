@@ -10,6 +10,14 @@
 
 @implementation CustomCell
 
+@synthesize storyPhoto;
+@synthesize storyOwnerAvatar;
+@synthesize storyTitle;
+@synthesize storyOwnerName;
+@synthesize totalComment;
+@synthesize totalLike;
+@synthesize totalRepost;
+
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

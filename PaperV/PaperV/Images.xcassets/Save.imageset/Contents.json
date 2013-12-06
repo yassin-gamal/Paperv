@@ -3,16 +3,16 @@
     {
       "idiom" : "iphone",
       "scale" : "1x",
-      "filename" : "custom_cell-2.png"
+      "filename" : "save-2.png"
     },
     {
       "idiom" : "iphone",
       "scale" : "2x",
-      "filename" : "custom_cell-1.png"
+      "filename" : "save-1.png"
     },
     {
       "idiom" : "iphone",
-      "filename" : "custom_cell.png",
+      "filename" : "save.png",
       "subtype" : "retina4",
       "scale" : "2x"
     }

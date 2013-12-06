@@ -8,8 +8,13 @@
 
 #import "StoryDetailsViewController.h"
 #import "CustomFriendCell.h"
+#import "JSONModelLib.h"
+#import "AsyncImageView.h"
+#import "SVProgressHUD.h"
+#import "StoryModel.h"
 
 @interface StoryDetailsViewController ()
+
 
 @property (nonatomic, strong) NSMutableArray *images;
 
@@ -21,10 +26,19 @@
 @synthesize header;
 @synthesize footer;
 
-@synthesize comment;
+@synthesize commentField;
 
 @synthesize carousel = _carousel;
 @synthesize images = _images;
+@synthesize avatar;
+
+@synthesize storyID;
+@synthesize story;
+@synthesize storyTitle;
+@synthesize storyOwner;
+@synthesize totalLike;
+@synthesize totlaRepost;
+@synthesize totalComment;
 
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -32,24 +46,13 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
-      
+        
     }
     return self;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
     if ( !(self = [super initWithCoder:aDecoder]) ) return nil;
-    
-    
-    NSArray *anArray = [NSArray arrayWithObjects:
-                        [UIImage imageNamed:@"test_image.png"],
-                        [UIImage imageNamed:@"test_image2.png"],
-                        [UIImage imageNamed:@"test_image3.png"],
-                        [UIImage imageNamed:@"test_image4.png"],
-                        [UIImage imageNamed:@"test_image5.png"],
-                        nil];
-    
-    _images = [anArray copy];
     
     return self;
 }
@@ -61,27 +64,45 @@
     
     header.backgroundColor = [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0];
     
-    comment.delegate = self;
+    commentField.delegate = self;
     
     UIView *paddingView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    comment.leftView = paddingView;
-    comment.leftViewMode = UITextFieldViewModeAlways;
-
+    commentField.leftView = paddingView;
+    commentField.leftViewMode = UITextFieldViewModeAlways;
     
-       //configure carousel
+    
+    //configure carousel
     _carousel.type = iCarouselTypeCoverFlow2;
+    
+    
+    _images = story.media;
+    [self.carousel reloadData];
+    [self.tableView reloadData];
+    
+    storyTitle.text = story.title;
+    
+    avatar.image = [UIImage imageNamed:@"Avatar.png"];
+    avatar.imageURL = [NSURL URLWithString:story.user_image];
+    avatar.layer.cornerRadius = avatar.frame.size.width / 2;
+    avatar.layer.masksToBounds = YES;
+    
+    storyOwner.text = story.user_fullname;
+    totalLike.text = [NSString stringWithFormat:@"%ld", (long)story.total_like];
+    totalComment.text = [NSString stringWithFormat:@"%ld", (long)story.comments.count];
+    totlaRepost.text = [NSString stringWithFormat:@"%ld", (long)story.total_repost];
+    
     
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [comment resignFirstResponder];
+    [commentField resignFirstResponder];
     return NO;
 }
 
@@ -93,6 +114,7 @@
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
+    
     
     //create new view if no view is available for recycling
     if (view == nil)
@@ -107,13 +129,24 @@
         imageView.shadowBlur = 5.0f;
         imageView.cornerRadius = 0.0f;
         view = imageView;
+        
+        
+        UILabel *imageCaption = [[UILabel alloc] initWithFrame:CGRectMake(0, 220, 260, 20)];
+        imageCaption.textAlignment = NSTextAlignmentCenter;
+        imageCaption.textColor = [UIColor grayColor];
+        imageCaption.font = [UIFont fontWithName:@"Heiti SC" size:15];
+        imageCaption.text = [_images[index] caption];
+        [view addSubview:imageCaption];
+        
     }
     
     //show placeholder
-//    ((FXImageView *)view).processedImage = [UIImage imageNamed:@"placeholder.png"];
+    //((FXImageView *)view).processedImage = [UIImage imageNamed:@"test_image1.png"];
     
     //set image
-    ((FXImageView *)view).image = _images[index];
+    NSString *imageUrl = [_images[index] image_url];
+    ((FXImageView *)view).imageURL = [NSURL URLWithString:imageUrl];
+    
     
     return view;
 }
@@ -150,11 +183,13 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 3;
+    return story.comments.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    CommentModel* storyComments = story.comments[indexPath.row];
+    
     static NSString *CellIdentifier = @"Cell";
     CustomFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
@@ -163,66 +198,81 @@
         cell = [[CustomFriendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
     }
-
     
-    // Configure the cell...
+    //set avatar
+    if (![storyComments.user_image  isEqual: @""])
+    {
+        cell.friendAvatar.image = [UIImage imageNamed:@"Avatar.png"];
+        cell.friendAvatar.imageURL = [NSURL URLWithString:storyComments.user_image];
+        
+        cell.friendAvatar.layer.cornerRadius = cell.friendAvatar.frame.size.width / 2;
+        cell.friendAvatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        cell.friendAvatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+    
+    cell.commentOwner.text = storyComments.user_fullname;
+    cell.comment.text = storyComments.user_comment;
+    
     
     return cell;
 }
 
 /*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+ // Override to support conditional editing of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the specified item to be editable.
+ return YES;
+ }
+ */
 
 /*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+ // Override to support editing the table view.
+ - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if (editingStyle == UITableViewCellEditingStyleDelete) {
+ // Delete the row from the data source
+ [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ }
+ else if (editingStyle == UITableViewCellEditingStyleInsert) {
+ // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+ }
+ }
+ */
 
 /*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+ // Override to support rearranging the table view.
+ - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+ {
+ }
+ */
 
 /*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
+ // Override to support conditional rearranging of the table view.
+ - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ // Return NO if you do not want the item to be re-orderable.
+ return YES;
+ }
+ */
 
 /*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
+ #pragma mark - Navigation
+ 
+ // In a story board-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+ {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ 
  */
 
 - (IBAction)closeStory:(id)sender {
     
-     [self dismissModalViewControllerAnimated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 @end
