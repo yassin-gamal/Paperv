@@ -23,6 +23,7 @@
 		046676FA184E5C9D00755F14 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676F9184E5C9D00755F14 /* Response.m */; };
 		046676FD184E5F2700755F14 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676FC184E5F2700755F14 /* FeedModel.m */; };
 		04667708184E6B8D00755F14 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667707184E6B8D00755F14 /* Connector.m */; };
+		0483E2FB18532E2F006856C1 /* FollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483E2FA18532E2F006856C1 /* FollowModel.m */; };
 		04A11C3218457602004091B7 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A11C3118457602004091B7 /* SideMenuViewController.m */; };
 		04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A72183F468000680D25 /* HomeFeedViewController.m */; };
 		04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A75183F469400680D25 /* ExploreFeedViewController.m */; };
@@ -110,6 +111,8 @@
 		046676FC184E5F2700755F14 /* FeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedModel.m; sourceTree = "<group>"; };
 		04667706184E6B8D00755F14 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
 		04667707184E6B8D00755F14 /* Connector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
+		0483E2F918532E2F006856C1 /* FollowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowModel.h; sourceTree = "<group>"; };
+		0483E2FA18532E2F006856C1 /* FollowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowModel.m; sourceTree = "<group>"; };
 		04A11C3018457602004091B7 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		04A11C3118457602004091B7 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		04A48A71183F468000680D25 /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
@@ -433,6 +436,8 @@
 				046676F9184E5C9D00755F14 /* Response.m */,
 				046676FE184E607100755F14 /* FeedModels */,
 				04A7317F1851E67F009DB430 /* StoryModels */,
+				0483E2F918532E2F006856C1 /* FollowModel.h */,
+				0483E2FA18532E2F006856C1 /* FollowModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -697,6 +702,7 @@
 				04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */,
 				04667708184E6B8D00755F14 /* Connector.m in Sources */,
 				04C222991850A7C500D6817C /* AsyncImageView.m in Sources */,
+				0483E2FB18532E2F006856C1 /* FollowModel.m in Sources */,
 				046676F6184E545300755F14 /* JSONKeyMapper.m in Sources */,
 				046676F5184E545300755F14 /* JSONModel+networking.m in Sources */,
 				04C263021842171800950CF1 /* EditProfileViewController.m in Sources */,

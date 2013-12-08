@@ -30,6 +30,13 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *totalComment;
 
+- (IBAction)followStoryOwner:(id)sender;
+
+- (IBAction)likeStory:(id)sender;
+
+- (IBAction)reglideStory:(id)sender;
+
+- (IBAction)addComment:(id)sender;
 
 
 @property NSString *storyID;

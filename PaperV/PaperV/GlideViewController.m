@@ -47,9 +47,9 @@
     storyTitleField.delegate = self;
     
     
-    myScrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    [[self myScrollView] setScrollEnabled:YES];
-    [[self myScrollView] setContentSize:CGSizeMake(320, 800)];
+//    myScrollView.translatesAutoresizingMaskIntoConstraints = NO;
+//    [[self myScrollView] setScrollEnabled:YES];
+//    [[self myScrollView] setContentSize:CGSizeMake(320, 800)];
     
     self.colorArray  = [[NSArray alloc] initWithObjects:@"Category",@"Blue",@"Green",@"Orange",@"Purple",@"Red",@"Yellow" , nil];
     

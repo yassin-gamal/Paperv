@@ -12,8 +12,12 @@
 #import "AsyncImageView.h"
 #import "SVProgressHUD.h"
 #import "StoryModel.h"
+#import "FollowModel.h"
 
 @interface StoryDetailsViewController ()
+{
+    FollowModel * _follow;
+}
 
 
 @property (nonatomic, strong) NSMutableArray *images;
@@ -79,6 +83,18 @@
     [self.carousel reloadData];
     [self.tableView reloadData];
     
+    if (story.title.length > 25)
+    {
+        storyTitle.font = [UIFont fontWithName:@"Heiti SC" size:16];
+    }
+    if (story.title.length > 35)
+    {
+        storyTitle.font = [UIFont fontWithName:@"Heiti SC" size:14];
+    }
+    if (story.title.length > 35)
+    {
+        storyTitle.font = [UIFont fontWithName:@"Heiti SC" size:12];
+    }
     storyTitle.text = story.title;
     
     avatar.image = [UIImage imageNamed:@"Avatar.png"];
@@ -137,6 +153,11 @@
         imageCaption.font = [UIFont fontWithName:@"Heiti SC" size:15];
         imageCaption.text = [_images[index] caption];
         [view addSubview:imageCaption];
+        
+        if ([_images[index] caption].length > 30)
+        {
+            imageCaption.font = [UIFont fontWithName:@"Heiti SC" size:13];
+        }
         
     }
     
@@ -274,5 +295,87 @@
 - (IBAction)closeStory:(id)sender {
     
     [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (IBAction)followStoryOwner:(id)sender {
+    
+    NSString *message = [NSString stringWithFormat:@"Following %@", story.user_fullname];
+    [SVProgressHUD showWithStatus:message];
+    
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/follow.php?user_id=1106&target_id=%@", story.user_id];
+    _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+        
+        [SVProgressHUD dismiss];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+    }];
+    
+    
+    
+}
+
+- (IBAction)likeStory:(id)sender {
+    
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/like.php?user_id=1106&type_id=story&target_id=%@", story.story_id];
+    _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+        
+    }];
+    
+}
+
+- (IBAction)reglideStory:(id)sender {
+    
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/reglide.php?user_id=1106&story_id=%@", story.story_id];
+    _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+        
+        if (_follow.success == YES)
+        {
+            NSInteger reglideCounter = story.total_repost + 1;
+            
+            totlaRepost.text = [NSString stringWithFormat:@"%d", reglideCounter];
+        }
+        
+    }];
+    
+    
+}
+
+- (IBAction)addComment:(id)sender {
+    
+    if (commentField.text.length > 0) {
+        
+        NSString *comment = [commentField.text stringByReplacingOccurrencesOfString:@" "
+                                                                         withString:@"%20"];
+        
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/add_comment.php?user_id=1106&story_id=%@&comment=%@", story.story_id, comment];
+        _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+            
+            //            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+            
+            if (_follow.success == YES)
+            {
+                NSInteger commentCounter = story.comments.count + 1;
+                totalComment.text = [NSString stringWithFormat:@"%d", commentCounter];
+                
+                CommentModel *commentModel = [[CommentModel alloc] init];
+                commentModel.user_fullname = @"Yehia Elsaka";
+                commentModel.user_image = @"";
+                commentModel.user_id = @"1106";
+                commentModel.user_comment = commentField.text;
+                
+                [story.comments addObject:commentModel];
+                
+                [self.tableView reloadData];
+                
+                commentField.text = @"";
+            }
+            
+        }];
+    }
 }
 @end
