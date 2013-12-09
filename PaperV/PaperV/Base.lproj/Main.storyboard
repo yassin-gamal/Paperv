@@ -1462,6 +1462,9 @@
                                                         <state key="normal">
                                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="choosePhoto:" destination="WRB-fY-0aO" eventType="touchUpInside" id="mUO-Gk-jIW"/>
+                                                        </connections>
                                                     </button>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Camera" translatesAutoresizingMaskIntoConstraints="NO" id="EQd-cF-8aB">
                                                         <rect key="frame" x="13" y="10" width="40" height="38"/>
@@ -1507,20 +1510,20 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="300" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="GfO-7O-2Mo">
                                                 <rect key="frame" x="10" y="248" width="300" height="300"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="300" id="UDF-NL-Xo4"/>
                                                     <constraint firstAttribute="height" constant="300" id="bcO-4z-uAg"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="280" id="k2h-r2-iFT" customClass="CustomCell">
+                                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="280" id="k2h-r2-iFT" customClass="CustomGlideCell">
                                                         <rect key="frame" x="0.0" y="1" width="300" height="280"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k2h-r2-iFT" id="0ki-t8-3Do">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="280"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_image2" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-ms-0Dl">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Empty_2" translatesAutoresizingMaskIntoConstraints="NO" id="Fkr-ms-0Dl">
                                                                     <rect key="frame" x="25" y="24" width="250" height="188"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 </imageView>
@@ -1530,9 +1533,21 @@
                                                                     <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="17"/>
                                                                     <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                                 </textField>
+                                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juY-vf-dux">
+                                                                    <rect key="frame" x="261" y="7" width="32" height="32"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <state key="normal" backgroundImage="Close">
+                                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
                                                             </subviews>
                                                             <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                         </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="caption" destination="eB0-SZ-XCQ" id="Z8C-gZ-iRD"/>
+                                                            <outlet property="image" destination="Fkr-ms-0Dl" id="Mux-8l-Dll"/>
+                                                            <outlet property="removeButton" destination="juY-vf-dux" id="lZh-VI-UOV"/>
+                                                        </connections>
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
@@ -2447,6 +2462,7 @@
         <image name="Contact" width="32" height="32"/>
         <image name="Divider" width="1" height="46"/>
         <image name="Edit" width="48" height="48"/>
+        <image name="Empty_2" width="316" height="210"/>
         <image name="Explore_icon" width="50" height="50"/>
         <image name="Facebook" width="277" height="84"/>
         <image name="Feed_image" width="360" height="265"/>
@@ -2477,7 +2493,6 @@
         <image name="Vedio" width="128" height="128"/>
         <image name="WhiteClose" width="37" height="37"/>
         <image name="cell_baner" width="640" height="240"/>
-        <image name="test_image2" width="284" height="177"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

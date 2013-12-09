@@ -40,6 +40,21 @@
 		04A764FE1855C0C900DA718D /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A764FD1855C0C900DA718D /* FriendModel.m */; };
 		04A765011855C25500DA718D /* FollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A765001855C25500DA718D /* FollowModel.m */; };
 		04A765041855C3DC00DA718D /* CustomFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A765031855C3DC00DA718D /* CustomFollowCell.m */; };
+		04A7653718560FBF00DA718D /* AviarySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 04A7653518560FBF00DA718D /* AviarySDKResources.bundle */; };
+		04A765391856110200DA718D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A765381856110200DA718D /* SystemConfiguration.framework */; };
+		04A7653B1856111800DA718D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7653A1856111800DA718D /* OpenGLES.framework */; };
+		04A7653D1856113700DA718D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7653C1856113700DA718D /* CoreText.framework */; };
+		04A7653F1856114B00DA718D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7653E1856114B00DA718D /* StoreKit.framework */; };
+		04A765411856116700DA718D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A765401856116700DA718D /* QuartzCore.framework */; };
+		04A765431856117700DA718D /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A765421856117700DA718D /* libz.1.2.5.dylib */; };
+		04A765451856119D00DA718D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A765441856119D00DA718D /* libsqlite3.0.dylib */; };
+		04A76547185611B100DA718D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A76546185611B100DA718D /* CoreData.framework */; };
+		04A76549185611C700DA718D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A76548185611C700DA718D /* Accelerate.framework */; };
+		04A7654B185611DA00DA718D /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7654A185611DA00DA718D /* AssetsLibrary.framework */; };
+		04A7654D1856131700DA718D /* libAviarySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A7654C1856131700DA718D /* libAviarySDK.a */; };
+		04A76551185623CF00DA718D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A76550185623CF00DA718D /* MessageUI.framework */; };
+		04A76555185632C800DA718D /* GlideModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76554185632C800DA718D /* GlideModel.m */; };
+		04A765581856333D00DA718D /* CustomGlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A765571856333D00DA718D /* CustomGlideCell.m */; };
 		04A76ED51840984F00145914 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED41840984F00145914 /* ProfileViewController.m */; };
 		04A76ED8184098A900145914 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED7184098A900145914 /* GlideViewController.m */; };
 		04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0C81847849E0052CA07 /* iCarousel.m */; };
@@ -147,6 +162,31 @@
 		04A765001855C25500DA718D /* FollowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowModel.m; sourceTree = "<group>"; };
 		04A765021855C3DC00DA718D /* CustomFollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFollowCell.h; sourceTree = "<group>"; };
 		04A765031855C3DC00DA718D /* CustomFollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFollowCell.m; sourceTree = "<group>"; };
+		04A7652B18560FBF00DA718D /* AFOpenGLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFOpenGLManager.h; sourceTree = "<group>"; };
+		04A7652C18560FBF00DA718D /* AFPhotoEditorContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorContext.h; sourceTree = "<group>"; };
+		04A7652D18560FBF00DA718D /* AFPhotoEditorController+InAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFPhotoEditorController+InAppPurchase.h"; sourceTree = "<group>"; };
+		04A7652E18560FBF00DA718D /* AFPhotoEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorController.h; sourceTree = "<group>"; };
+		04A7652F18560FBF00DA718D /* AFPhotoEditorControllerOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorControllerOptions.h; sourceTree = "<group>"; };
+		04A7653018560FBF00DA718D /* AFPhotoEditorCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorCustomization.h; sourceTree = "<group>"; };
+		04A7653118560FBF00DA718D /* AFPhotoEditorProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorProduct.h; sourceTree = "<group>"; };
+		04A7653218560FBF00DA718D /* AFPhotoEditorSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPhotoEditorSession.h; sourceTree = "<group>"; };
+		04A7653518560FBF00DA718D /* AviarySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AviarySDKResources.bundle; sourceTree = "<group>"; };
+		04A765381856110200DA718D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		04A7653A1856111800DA718D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		04A7653C1856113700DA718D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		04A7653E1856114B00DA718D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		04A765401856116700DA718D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		04A765421856117700DA718D /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
+		04A765441856119D00DA718D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		04A76546185611B100DA718D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		04A76548185611C700DA718D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		04A7654A185611DA00DA718D /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		04A7654C1856131700DA718D /* libAviarySDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAviarySDK.a; sourceTree = "<group>"; };
+		04A76550185623CF00DA718D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		04A76553185632C800DA718D /* GlideModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideModel.h; sourceTree = "<group>"; };
+		04A76554185632C800DA718D /* GlideModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideModel.m; sourceTree = "<group>"; };
+		04A765561856333D00DA718D /* CustomGlideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomGlideCell.h; sourceTree = "<group>"; };
+		04A765571856333D00DA718D /* CustomGlideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomGlideCell.m; sourceTree = "<group>"; };
 		04A76ED31840984F00145914 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		04A76ED41840984F00145914 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		04A76ED6184098A900145914 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
@@ -200,6 +240,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A76551185623CF00DA718D /* MessageUI.framework in Frameworks */,
+				04A7654B185611DA00DA718D /* AssetsLibrary.framework in Frameworks */,
+				04A76549185611C700DA718D /* Accelerate.framework in Frameworks */,
+				04A76547185611B100DA718D /* CoreData.framework in Frameworks */,
+				04A765451856119D00DA718D /* libsqlite3.0.dylib in Frameworks */,
+				04A765431856117700DA718D /* libz.1.2.5.dylib in Frameworks */,
+				04A765411856116700DA718D /* QuartzCore.framework in Frameworks */,
+				04A7653F1856114B00DA718D /* StoreKit.framework in Frameworks */,
+				04A7653D1856113700DA718D /* CoreText.framework in Frameworks */,
+				04A7653B1856111800DA718D /* OpenGLES.framework in Frameworks */,
+				04A765391856110200DA718D /* SystemConfiguration.framework in Frameworks */,
+				04A7654D1856131700DA718D /* libAviarySDK.a in Frameworks */,
 				629A82F618390C7E0075F918 /* CoreGraphics.framework in Frameworks */,
 				629A82F818390C7E0075F918 /* UIKit.framework in Frameworks */,
 				629A82F418390C7E0075F918 /* Foundation.framework in Frameworks */,
@@ -287,6 +339,8 @@
 				043BAE0B1840D18A0028E6FF /* CustomCommentCell.m */,
 				04A765021855C3DC00DA718D /* CustomFollowCell.h */,
 				04A765031855C3DC00DA718D /* CustomFollowCell.m */,
+				04A765561856333D00DA718D /* CustomGlideCell.h */,
+				04A765571856333D00DA718D /* CustomGlideCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -400,6 +454,39 @@
 			name = ProfileModels;
 			sourceTree = "<group>";
 		};
+		04A7652918560FBF00DA718D /* AviarySDK */ = {
+			isa = PBXGroup;
+			children = (
+				04A7654C1856131700DA718D /* libAviarySDK.a */,
+				04A7652A18560FBF00DA718D /* Headers */,
+				04A7653418560FBF00DA718D /* Resources */,
+			);
+			path = AviarySDK;
+			sourceTree = "<group>";
+		};
+		04A7652A18560FBF00DA718D /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				04A7652B18560FBF00DA718D /* AFOpenGLManager.h */,
+				04A7652C18560FBF00DA718D /* AFPhotoEditorContext.h */,
+				04A7652D18560FBF00DA718D /* AFPhotoEditorController+InAppPurchase.h */,
+				04A7652E18560FBF00DA718D /* AFPhotoEditorController.h */,
+				04A7652F18560FBF00DA718D /* AFPhotoEditorControllerOptions.h */,
+				04A7653018560FBF00DA718D /* AFPhotoEditorCustomization.h */,
+				04A7653118560FBF00DA718D /* AFPhotoEditorProduct.h */,
+				04A7653218560FBF00DA718D /* AFPhotoEditorSession.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		04A7653418560FBF00DA718D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04A7653518560FBF00DA718D /* AviarySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		04A8C0C5184783F10052CA07 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,6 +548,8 @@
 				04A7317F1851E67F009DB430 /* StoryModels */,
 				0483E2F918532E2F006856C1 /* MessageResponseModel.h */,
 				0483E2FA18532E2F006856C1 /* MessageResponseModel.m */,
+				04A76553185632C800DA718D /* GlideModel.h */,
+				04A76554185632C800DA718D /* GlideModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -502,6 +591,7 @@
 		62797D0918392EB200A2A57C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				04A7652918560FBF00DA718D /* AviarySDK */,
 				629A830518390C7E0075F918 /* Main.storyboard */,
 				04A636A91844EF0B00480D5A /* SideMenuView.h */,
 				04A636AA1844EF0B00480D5A /* SideMenuView.m */,
@@ -536,6 +626,17 @@
 		629A82F218390C7E0075F918 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04A76550185623CF00DA718D /* MessageUI.framework */,
+				04A7654A185611DA00DA718D /* AssetsLibrary.framework */,
+				04A76548185611C700DA718D /* Accelerate.framework */,
+				04A76546185611B100DA718D /* CoreData.framework */,
+				04A765441856119D00DA718D /* libsqlite3.0.dylib */,
+				04A765421856117700DA718D /* libz.1.2.5.dylib */,
+				04A765401856116700DA718D /* QuartzCore.framework */,
+				04A7653E1856114B00DA718D /* StoreKit.framework */,
+				04A7653C1856113700DA718D /* CoreText.framework */,
+				04A7653A1856111800DA718D /* OpenGLES.framework */,
+				04A765381856110200DA718D /* SystemConfiguration.framework */,
 				629A82F318390C7E0075F918 /* Foundation.framework */,
 				629A82F518390C7E0075F918 /* CoreGraphics.framework */,
 				629A82F718390C7E0075F918 /* UIKit.framework */,
@@ -667,6 +768,7 @@
 			files = (
 				04C222A11850D43F00D6817C /* SVProgressHUD.bundle in Resources */,
 				04A8C0F218479CC00052CA07 /* background.png in Resources */,
+				04A7653718560FBF00DA718D /* AviarySDKResources.bundle in Resources */,
 				04C2229B1850C94F00D6817C /* Placeholder.png in Resources */,
 				629A830C18390C7E0075F918 /* Images.xcassets in Resources */,
 				629A82FE18390C7E0075F918 /* InfoPlist.strings in Resources */,
@@ -718,6 +820,8 @@
 				04A764FE1855C0C900DA718D /* FriendModel.m in Sources */,
 				04A765041855C3DC00DA718D /* CustomFollowCell.m in Sources */,
 				04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */,
+				04A765581856333D00DA718D /* CustomGlideCell.m in Sources */,
+				04A76555185632C800DA718D /* GlideModel.m in Sources */,
 				62797D0C1839310400A2A57C /* NavigationController.m in Sources */,
 				04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */,
 				04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */,
@@ -869,6 +973,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperV/PaperV-Prefix.pch";
 				INFOPLIST_FILE = "PaperV/PaperV-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mac/Documents/GitHub_WorkSpace/iOS_Paperv/PaperV/PaperV/AviarySDK,
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-Objc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -883,6 +995,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PaperV/PaperV-Prefix.pch";
 				INFOPLIST_FILE = "PaperV/PaperV-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mac/Documents/GitHub_WorkSpace/iOS_Paperv/PaperV/PaperV/AviarySDK,
+				);
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-Objc",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
