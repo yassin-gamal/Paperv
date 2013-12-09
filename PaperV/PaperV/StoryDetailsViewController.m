@@ -7,16 +7,16 @@
 //
 
 #import "StoryDetailsViewController.h"
-#import "CustomFriendCell.h"
+#import "CustomCommentCell.h"
 #import "JSONModelLib.h"
 #import "AsyncImageView.h"
 #import "SVProgressHUD.h"
 #import "StoryModel.h"
-#import "FollowModel.h"
+#import "MessageResponseModel.h"
 
 @interface StoryDetailsViewController ()
 {
-    FollowModel * _follow;
+    MessageResponseModel * _msgResponse;
 }
 
 
@@ -212,12 +212,15 @@
     CommentModel* storyComments = story.comments[indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
-    CustomFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    CustomCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (cell == nil)
     {
-        cell = [[CustomFriendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CustomCommentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
+    }
+    {
+        cell.friendAvatar.image = [UIImage imageNamed:@"Avatar.png"];
     }
     
     //set avatar
@@ -304,11 +307,24 @@
     [SVProgressHUD showWithStatus:message];
     
     NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/follow.php?user_id=1106&target_id=%@", story.user_id];
-    _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+    _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
+        if (_msgResponse.success == YES)
+        {
         [SVProgressHUD dismiss];
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _msgResponse.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+        }
+        
+        else
+        {
+            [SVProgressHUD dismiss];
+            
+            NSString *msg = [NSString stringWithFormat:@"You already follow %@", story.user_fullname];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message:msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+            
+        }
+        
     }];
     
     
@@ -317,23 +333,30 @@
 
 - (IBAction)likeStory:(id)sender {
     
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/like.php?user_id=1106&type_id=story&target_id=%@", story.story_id];
-    _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
-        
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
-        
-    }];
-    
+    if (! story.is_liked)
+    {
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/like.php?user_id=1106&type_id=story&item_id=%@", story.story_id];
+        _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+            
+            if (_msgResponse.success == YES)
+            {
+                NSInteger likeCounter = story.total_like + 1;
+                
+                totalLike.text = [NSString stringWithFormat:@"%d", likeCounter];
+            }
+            
+        }];
+    }
 }
 
 - (IBAction)reglideStory:(id)sender {
     
     NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/reglide.php?user_id=1106&story_id=%@", story.story_id];
-    _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+    _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _msgResponse.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
         
-        if (_follow.success == YES)
+        if (_msgResponse.success == YES)
         {
             NSInteger reglideCounter = story.total_repost + 1;
             
@@ -353,11 +376,11 @@
                                                                          withString:@"%20"];
         
         NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/add_comment.php?user_id=1106&story_id=%@&comment=%@", story.story_id, comment];
-        _follow = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+        _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
             
             //            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
             
-            if (_follow.success == YES)
+            if (_msgResponse.success == YES)
             {
                 NSInteger commentCounter = story.comments.count + 1;
                 totalComment.text = [NSString stringWithFormat:@"%d", commentCounter];

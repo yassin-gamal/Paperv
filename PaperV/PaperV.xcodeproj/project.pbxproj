@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE081840D1470028E6FF /* FollowersViewController.m */; };
-		043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */; };
+		043BAE0C1840D18A0028E6FF /* CustomCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0B1840D18A0028E6FF /* CustomCommentCell.m */; };
 		043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0E1840D73C0028E6FF /* FollowingViewController.m */; };
 		046676EE184E545300755F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676D7184E545300755F14 /* JSONModel.m */; };
 		046676EF184E545300755F14 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676D9184E545300755F14 /* JSONModelArray.m */; };
@@ -23,7 +23,7 @@
 		046676FA184E5C9D00755F14 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676F9184E5C9D00755F14 /* Response.m */; };
 		046676FD184E5F2700755F14 /* FeedModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676FC184E5F2700755F14 /* FeedModel.m */; };
 		04667708184E6B8D00755F14 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 04667707184E6B8D00755F14 /* Connector.m */; };
-		0483E2FB18532E2F006856C1 /* FollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483E2FA18532E2F006856C1 /* FollowModel.m */; };
+		0483E2FB18532E2F006856C1 /* MessageResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0483E2FA18532E2F006856C1 /* MessageResponseModel.m */; };
 		04A11C3218457602004091B7 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A11C3118457602004091B7 /* SideMenuViewController.m */; };
 		04A48A73183F468000680D25 /* HomeFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A72183F468000680D25 /* HomeFeedViewController.m */; };
 		04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A48A75183F469400680D25 /* ExploreFeedViewController.m */; };
@@ -37,6 +37,9 @@
 		04A731851851E773009DB430 /* MediaModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A731841851E773009DB430 /* MediaModel.m */; };
 		04A731881851E8B3009DB430 /* StoryDetailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A731871851E8B3009DB430 /* StoryDetailsModel.m */; };
 		04A7318B1851F93A009DB430 /* StoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7318A1851F93A009DB430 /* StoryModel.m */; };
+		04A764FE1855C0C900DA718D /* FriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A764FD1855C0C900DA718D /* FriendModel.m */; };
+		04A765011855C25500DA718D /* FollowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A765001855C25500DA718D /* FollowModel.m */; };
+		04A765041855C3DC00DA718D /* CustomFollowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A765031855C3DC00DA718D /* CustomFollowCell.m */; };
 		04A76ED51840984F00145914 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED41840984F00145914 /* ProfileViewController.m */; };
 		04A76ED8184098A900145914 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED7184098A900145914 /* GlideViewController.m */; };
 		04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0C81847849E0052CA07 /* iCarousel.m */; };
@@ -80,8 +83,8 @@
 /* Begin PBXFileReference section */
 		043BAE071840D1470028E6FF /* FollowersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowersViewController.h; sourceTree = "<group>"; };
 		043BAE081840D1470028E6FF /* FollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowersViewController.m; sourceTree = "<group>"; };
-		043BAE0A1840D18A0028E6FF /* CustomFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFriendCell.h; sourceTree = "<group>"; };
-		043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFriendCell.m; sourceTree = "<group>"; };
+		043BAE0A1840D18A0028E6FF /* CustomCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCommentCell.h; sourceTree = "<group>"; };
+		043BAE0B1840D18A0028E6FF /* CustomCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCommentCell.m; sourceTree = "<group>"; };
 		043BAE0D1840D73C0028E6FF /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
 		043BAE0E1840D73C0028E6FF /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
 		046676D6184E545300755F14 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
@@ -111,8 +114,8 @@
 		046676FC184E5F2700755F14 /* FeedModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedModel.m; sourceTree = "<group>"; };
 		04667706184E6B8D00755F14 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
 		04667707184E6B8D00755F14 /* Connector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
-		0483E2F918532E2F006856C1 /* FollowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowModel.h; sourceTree = "<group>"; };
-		0483E2FA18532E2F006856C1 /* FollowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowModel.m; sourceTree = "<group>"; };
+		0483E2F918532E2F006856C1 /* MessageResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageResponseModel.h; sourceTree = "<group>"; };
+		0483E2FA18532E2F006856C1 /* MessageResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageResponseModel.m; sourceTree = "<group>"; };
 		04A11C3018457602004091B7 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		04A11C3118457602004091B7 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
 		04A48A71183F468000680D25 /* HomeFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFeedViewController.h; sourceTree = "<group>"; };
@@ -138,6 +141,12 @@
 		04A731871851E8B3009DB430 /* StoryDetailsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryDetailsModel.m; sourceTree = "<group>"; };
 		04A731891851F93A009DB430 /* StoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryModel.h; sourceTree = "<group>"; };
 		04A7318A1851F93A009DB430 /* StoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryModel.m; sourceTree = "<group>"; };
+		04A764FC1855C0C900DA718D /* FriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendModel.h; sourceTree = "<group>"; };
+		04A764FD1855C0C900DA718D /* FriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendModel.m; sourceTree = "<group>"; };
+		04A764FF1855C25500DA718D /* FollowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowModel.h; sourceTree = "<group>"; };
+		04A765001855C25500DA718D /* FollowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowModel.m; sourceTree = "<group>"; };
+		04A765021855C3DC00DA718D /* CustomFollowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomFollowCell.h; sourceTree = "<group>"; };
+		04A765031855C3DC00DA718D /* CustomFollowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomFollowCell.m; sourceTree = "<group>"; };
 		04A76ED31840984F00145914 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		04A76ED41840984F00145914 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		04A76ED6184098A900145914 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
@@ -274,8 +283,10 @@
 			children = (
 				04A48A80183F539400680D25 /* CustomCell.h */,
 				04A48A81183F539400680D25 /* CustomCell.m */,
-				043BAE0A1840D18A0028E6FF /* CustomFriendCell.h */,
-				043BAE0B1840D18A0028E6FF /* CustomFriendCell.m */,
+				043BAE0A1840D18A0028E6FF /* CustomCommentCell.h */,
+				043BAE0B1840D18A0028E6FF /* CustomCommentCell.m */,
+				04A765021855C3DC00DA718D /* CustomFollowCell.h */,
+				04A765031855C3DC00DA718D /* CustomFollowCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -378,6 +389,17 @@
 			name = StoryModels;
 			sourceTree = "<group>";
 		};
+		04A764FB1855C03400DA718D /* ProfileModels */ = {
+			isa = PBXGroup;
+			children = (
+				04A764FC1855C0C900DA718D /* FriendModel.h */,
+				04A764FD1855C0C900DA718D /* FriendModel.m */,
+				04A764FF1855C25500DA718D /* FollowModel.h */,
+				04A765001855C25500DA718D /* FollowModel.m */,
+			);
+			name = ProfileModels;
+			sourceTree = "<group>";
+		};
 		04A8C0C5184783F10052CA07 /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,9 +457,10 @@
 				046676F8184E5C9D00755F14 /* Response.h */,
 				046676F9184E5C9D00755F14 /* Response.m */,
 				046676FE184E607100755F14 /* FeedModels */,
+				04A764FB1855C03400DA718D /* ProfileModels */,
 				04A7317F1851E67F009DB430 /* StoryModels */,
-				0483E2F918532E2F006856C1 /* FollowModel.h */,
-				0483E2FA18532E2F006856C1 /* FollowModel.m */,
+				0483E2F918532E2F006856C1 /* MessageResponseModel.h */,
+				0483E2FA18532E2F006856C1 /* MessageResponseModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -675,13 +698,14 @@
 				046676F4184E545300755F14 /* JSONHTTPClient.m in Sources */,
 				04A636A21844EBB600480D5A /* TWTSideMenuViewController.m in Sources */,
 				04A636AB1844EF0B00480D5A /* SideMenuView.m in Sources */,
-				043BAE0C1840D18A0028E6FF /* CustomFriendCell.m in Sources */,
+				043BAE0C1840D18A0028E6FF /* CustomCommentCell.m in Sources */,
 				04B2284A184DD28F0070E42E /* StoryFeedModel.m in Sources */,
 				043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */,
 				04FCA09B18461C09003CE6E7 /* StoryDetailsViewController.m in Sources */,
 				046676EE184E545300755F14 /* JSONModel.m in Sources */,
 				04A731851851E773009DB430 /* MediaModel.m in Sources */,
 				04A8C0E6184785A80052CA07 /* FXImageView.m in Sources */,
+				04A765011855C25500DA718D /* FollowModel.m in Sources */,
 				04A76ED8184098A900145914 /* GlideViewController.m in Sources */,
 				046676FD184E5F2700755F14 /* FeedModel.m in Sources */,
 				04A48A76183F469400680D25 /* ExploreFeedViewController.m in Sources */,
@@ -691,6 +715,8 @@
 				046676F2184E545300755F14 /* NSArray+JSONModel.m in Sources */,
 				04A731821851E6BC009DB430 /* CommentModel.m in Sources */,
 				04A731881851E8B3009DB430 /* StoryDetailsModel.m in Sources */,
+				04A764FE1855C0C900DA718D /* FriendModel.m in Sources */,
+				04A765041855C3DC00DA718D /* CustomFollowCell.m in Sources */,
 				04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */,
 				62797D0C1839310400A2A57C /* NavigationController.m in Sources */,
 				04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */,
@@ -702,7 +728,7 @@
 				04A59205183E7B7800A96F71 /* LoginViewController.m in Sources */,
 				04667708184E6B8D00755F14 /* Connector.m in Sources */,
 				04C222991850A7C500D6817C /* AsyncImageView.m in Sources */,
-				0483E2FB18532E2F006856C1 /* FollowModel.m in Sources */,
+				0483E2FB18532E2F006856C1 /* MessageResponseModel.m in Sources */,
 				046676F6184E545300755F14 /* JSONKeyMapper.m in Sources */,
 				046676F5184E545300755F14 /* JSONModel+networking.m in Sources */,
 				04C263021842171800950CF1 /* EditProfileViewController.m in Sources */,

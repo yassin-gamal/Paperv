@@ -7,9 +7,19 @@
 //
 
 #import "FollowersViewController.h"
-#import "CustomFriendCell.h"
+#import "CustomFollowCell.h"
+#import "JSONModelLib.h"
+#import "FollowModel.h"
+#import "SVProgressHUD.h"
+#import "FriendModel.h"
+#import "AsyncImageView.h"
+#import "MessageResponseModel.h"
 
 @interface FollowersViewController ()
+{
+    FollowModel *_followers;
+    MessageResponseModel *_response;
+}
 
 
 @end
@@ -42,6 +52,25 @@
     [profileAvatar setImage:image];
     profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;
     profileAvatar.layer.masksToBounds = YES;
+    
+    
+    
+    [SVProgressHUD showWithStatus:@"Fetching Followers"];
+    
+    //fetch the feed
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_followers.php?user_id=1106"];
+    _followers = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+        
+        //json fetched
+        
+        //reload the table view
+        [self.myTableView reloadData];
+        [SVProgressHUD dismiss];
+        
+    }];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,40 +91,91 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 10;
+    return _followers.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    FriendModel* friendData = _followers.data[indexPath.row];
+    
     static NSString *CellIdentifier = @"Cell";
-    CustomFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    CustomFollowCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if (cell == nil)
     {
-        cell = [[CustomFriendCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[CustomFollowCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         
+    }
+    {
+        cell.friendAvatar.image = [UIImage imageNamed:@"Avatar.png"];
     }
     
     
+    //set avatar
+    if (![friendData.user_image  isEqual: @""])
+    {
+        cell.friendAvatar.image = [UIImage imageNamed:@"Avatar.png"];
+        cell.friendAvatar.imageURL = [NSURL URLWithString:friendData.user_image];
+        
+        cell.friendAvatar.layer.cornerRadius = cell.friendAvatar.frame.size.width / 2;
+        cell.friendAvatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        cell.friendAvatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+    
+    cell.friendName.text = friendData.user_fullname;
+    
     [cell.followButtonText setTitleColor:[UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0] forState:UIControlStateNormal];
     
-    
-    UIImage *image = [UIImage imageNamed:@"Yassin"];
-    [cell.friendAvatar setImage:image];
-    cell.friendAvatar.layer.cornerRadius = cell.friendAvatar.frame.size.width / 2;
-    cell.friendAvatar.layer.masksToBounds = YES;
-    
-    
-    
-    // Configure the cell...
+    cell.followButtonText.tag = indexPath.row;
+    [cell.followButtonText addTarget:self action:@selector(follow:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
+
+-(IBAction)follow:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    int indexrow = btn.tag;
+    
+    FriendModel* friendData = _followers.data[indexrow];
+    
+    NSString *msg = [NSString stringWithFormat:@"Follow %@", friendData.user_fullname];
+    [SVProgressHUD showWithStatus:msg];
+    
+    //fetch the feed
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/follow.php?user_id=1106&target_id=%@", friendData.user_id];
+    _response = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+        
+        if (_response.success == YES)
+        {
+            [SVProgressHUD dismiss];
+            
+//            [_followers.data removeObjectAtIndex:indexrow];
+//            [self.myTableView reloadData];
+            
+        }
+        else
+        {
+            [SVProgressHUD dismiss];
+            
+            NSString *msg = [NSString stringWithFormat:@"You already follow %@", friendData.user_fullname];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message:msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+            
+        }
+        
+    }];
+    
+    
+}
+
 
 
 - (IBAction)closeFollowers:(id)sender {
     
     [self dismissModalViewControllerAnimated:YES];
-
+    
 }
 @end

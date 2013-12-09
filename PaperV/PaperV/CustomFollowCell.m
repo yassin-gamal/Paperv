@@ -1,18 +1,18 @@
 //
-//  CustomFriendCell.m
+//  CustomFollowCell.m
 //  PaperV
 //
-//  Created by mac on 11/23/13.
+//  Created by mac on 12/9/13.
 //  Copyright (c) 2013 Triangles. All rights reserved.
 //
 
-#import "CustomFriendCell.h"
+#import "CustomFollowCell.h"
 
-@implementation CustomFriendCell
+@implementation CustomFollowCell
 
 @synthesize friendAvatar;
-@synthesize comment;
-@synthesize commentOwner;
+@synthesize friendName;
+@synthesize followButtonText;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

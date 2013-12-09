@@ -149,7 +149,7 @@
     
     StoryFeedModel* storyData = _feed.data[indexPath.row];
     
-    [SVProgressHUD showWithStatus:@"Fetching More Stories"];
+    [SVProgressHUD showWithStatus:@"Fetching Story"];
     
     NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/get_story_by_id.php?user_id=1106&story_id=%@", storyData.story_id];
     _story = [[StoryModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
@@ -191,7 +191,7 @@
         NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/home.php?user_id=1106&page=%ld",(long)pageNumber];
         
         
-        [SVProgressHUD showWithStatus:@"Fetching Story"];
+        [SVProgressHUD showWithStatus:@"Fetching More Stories"];
 
         //fetch the feed
         _temp = [[FeedModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
