@@ -14,5 +14,6 @@
 
 @property UIImage *image;
 @property NSString *caption;
+@property NSString *videoURL;
 
 @end

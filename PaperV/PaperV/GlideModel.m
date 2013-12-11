@@ -12,5 +12,6 @@
 
 @synthesize image;
 @synthesize caption;
+@synthesize videoURL;
 
 @end

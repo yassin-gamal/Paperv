@@ -13,6 +13,7 @@
 #import "AFPhotoEditorController.h"
 #import "AFPhotoEditorCustomization.h"
 #import "AFOpenGLManager.h"
+#import "ASIHTTPRequest.h"
 
 @interface GlideViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, AFPhotoEditorControllerDelegate, UITextFieldDelegate>
 
@@ -26,5 +27,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *storyTitleField;
 
 - (IBAction)choosePhoto:(id)sender;
+- (IBAction)glideStory:(id)sender;
+- (IBAction)addVideo:(id)sender;
 
 @end

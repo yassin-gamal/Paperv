@@ -10,6 +10,9 @@
 #import "TWTSideMenuViewController.h"
 #import "GlideModel.h"
 #import "CustomGlideCell.h"
+#import "ASIFormDataRequest.h"
+
+
 
 
 @interface GlideViewController ()
@@ -69,6 +72,7 @@
     myTableView.transform = CGAffineTransformMakeRotation(M_PI/-2);
     
     storyTitleField.delegate = self;
+    storyTitleField.tag = -1;
     
     
     //    myScrollView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -149,19 +153,46 @@
     
     if (self.glideData != nil)
     {
-        cell.image.image = data.image;
+        if (![data.videoURL  isEqual: @""])
+        {
+            cell.youtubeImage.hidden = NO;
+            cell.videoURL.hidden = NO;
+            cell.videoURL.text = data.videoURL;
+            cell.videoURL.enabled = NO;
+            cell.caption.placeholder = @"Video Caption";
+            cell.image.image  = nil;
+        }
+        else
+        {
+            cell.youtubeImage.hidden = YES;
+            cell.videoURL.hidden = YES;
+            cell.image.image = data.image;
+        }
+        
         cell.caption.text = data.caption;
         
         cell.removeButton.tag = indexPath.row;
         [cell.removeButton addTarget:self action:@selector(removeItem:) forControlEvents:UIControlEventTouchUpInside];
     }
     
+    cell.caption.tag = indexPath.row;
     cellTextField = cell.caption;
     cellTextField.delegate = self;
     
     return cell;
 }
 
+
+-(void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    int indexrow = textField.tag;
+    if (self.glideData != nil && indexrow != -1)
+    {
+        GlideModel * data = [self.glideData objectAtIndex:indexrow];
+        data.caption = textField.text;
+        [self.glideData setObject:data atIndexedSubscript:indexrow];
+    }
+}
 
 
 -(IBAction)removeItem:(id)sender
@@ -253,6 +284,7 @@
     GlideModel *data = [[GlideModel alloc] init];
     data.image = image;
     data.caption = @"";
+    data.videoURL = @"";
     
     if (self.glideData == nil)
     {
@@ -366,6 +398,113 @@
         [imagePicker setDelegate:self];
         
         [self presentViewController:imagePicker animated:YES completion:nil];
+    }
+}
+
+- (IBAction)glideStory:(id)sender {
+    
+    if (self.glideData != nil && self.glideData.count > 0 && storyTitleField.text.length > 0)
+    {
+        
+        NSURL *url = [NSURL URLWithString:@"http://paperv.com/api/add_story.php"];
+        
+        ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+        [request setPostValue:@"1106" forKey:@"user_id"];
+        [request setPostValue:@"1" forKey:@"category_id"];
+        [request setPostValue:storyTitleField.text forKey:@"title"];
+        
+        NSString *videos = @"";
+        NSString *videoCaptions = @"";
+        NSString *imageCaptions = @"";
+        NSInteger imageIndex = 0;
+        
+        for (NSInteger index = 0; index < self.glideData.count; index++) {
+            
+            GlideModel* data = self.glideData[index];
+            
+            if (data.videoURL.length > 0) {
+                videos = [videos stringByAppendingString:data.videoURL];
+                videos = [videos stringByAppendingString:@","];
+                
+                videoCaptions = [videoCaptions stringByAppendingString:data.caption];
+                videoCaptions = [videoCaptions stringByAppendingString:@","];
+            }
+            
+            else
+            {
+                // get all images
+                NSData *imageData = UIImageJPEGRepresentation(data.image, 1.0);
+                [request setData:imageData withFileName:[NSString stringWithFormat:@"myphoto%f.jpg",[[NSDate date] timeIntervalSince1970]] andContentType:@"image/*" forKey:[NSString stringWithFormat:@"image[%d]",imageIndex++]];
+                
+                
+                imageCaptions = [imageCaptions stringByAppendingString:data.caption];
+                imageCaptions = [imageCaptions stringByAppendingString:@","];
+            }
+            
+        }
+    
+//        https://www.youtube.com/watch?v=K2EAYacKz7c
+        
+        
+        NSString *captions = [imageCaptions stringByAppendingString:videoCaptions];
+        
+        if ( [captions length] > 0)
+            captions = [captions substringToIndex:[captions length] - 1];
+        [request setPostValue:captions forKey:@"captions"];
+        
+        
+        if ( [videos length] > 0)
+            videos = [videos substringToIndex:[videos length] - 1];
+        [request setPostValue:videos forKey:@"videos"];
+
+        
+        
+        [request startAsynchronous];
+        
+        [self.glideData removeAllObjects];
+        [self.myTableView reloadData];
+        storyTitleField.text = @"";
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message:@"Story Glided Successfully." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+    }
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message:@"Incomplete data." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+    }
+}
+
+- (IBAction)addVideo:(id)sender {
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"PaperV!" message:@"Please enter your video link:" delegate:self cancelButtonTitle:@"Continue" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    //    alertTextField.keyboardType = UIKeyboardTypeNumberPad;
+    alertTextField.placeholder = @"Youtube url ...";
+    [alert show];
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    if ([[[alertView textFieldAtIndex:0] text] length] > 0)
+    {
+        GlideModel *data = [[GlideModel alloc] init];
+        data.image = nil;
+        data.caption = @"";
+        data.videoURL = [[alertView textFieldAtIndex:0] text];
+        
+        if (self.glideData == nil)
+        {
+            self.glideData = [[NSMutableArray alloc] initWithObjects:data, nil];
+        }
+        
+        else
+        {
+            [self.glideData addObject: data];
+        }
+        
+        [self.myTableView reloadData];
     }
 }
 @end

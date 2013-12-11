@@ -13,5 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *caption;
 @property (strong, nonatomic) IBOutlet UIButton *removeButton;
+@property (strong, nonatomic) IBOutlet UIImageView *youtubeImage;
+@property (strong, nonatomic) IBOutlet UITextField *videoURL;
 
 @end

@@ -13,10 +13,13 @@
 #import "SVProgressHUD.h"
 #import "StoryModel.h"
 #import "MessageResponseModel.h"
+#import <MediaPlayer/MediaPlayer.h>
+
 
 @interface StoryDetailsViewController ()
 {
     MessageResponseModel * _msgResponse;
+    UIWebView *webview;
 }
 
 
@@ -135,6 +138,7 @@
     //create new view if no view is available for recycling
     if (view == nil)
     {
+        // IMAGE
         FXImageView *imageView = [[FXImageView alloc] initWithFrame:CGRectMake(0, 0, 250.0f, 250.0f)];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
         imageView.asynchronous = YES;
@@ -147,6 +151,7 @@
         view = imageView;
         
         
+        // CAPTION
         UILabel *imageCaption = [[UILabel alloc] initWithFrame:CGRectMake(0, 220, 260, 20)];
         imageCaption.textAlignment = NSTextAlignmentCenter;
         imageCaption.textColor = [UIColor grayColor];
@@ -158,6 +163,66 @@
         {
             imageCaption.font = [UIFont fontWithName:@"Heiti SC" size:13];
         }
+        
+        
+        // PALY BUTTON
+        MediaModel *media = _images[index];
+        if ( [media.type  isEqual: @"attachvideo"]) {
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//            [button setTitle:@"VIDEO" forState:UIControlStateNormal];
+            button.frame = CGRectMake(85.0, 85.0, 80.0, 80.0);
+            button.tag = index;
+            
+            UIImage *buttonImage = [UIImage imageNamed:@"Play.png"];
+            [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(playAction:) forControlEvents:UIControlEventTouchUpInside];
+            
+            [view addSubview:button];
+        }
+        
+    }
+    else
+    {
+        UILabel *imageCaption = [view subviews][1];
+        imageCaption.text = [_images[index] caption];
+        
+        
+        if ([[view subviews] count] > 2) {
+            // PALY BUTTON
+            UIButton *button = [view subviews][2];
+            
+            MediaModel *media = _images[index];
+            if ( [media.type  isEqual: @"attachvideo"]) {
+                
+                button.hidden = NO;
+                button.tag = index;
+            }
+            else
+            {
+                button.hidden = YES;
+            }
+        }
+        
+        else
+        {
+            // PALY BUTTON
+            MediaModel *media = _images[index];
+            if ( [media.type  isEqual: @"attachvideo"]) {
+                
+                UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+                //            [button setTitle:@"VIDEO" forState:UIControlStateNormal];
+                button.frame = CGRectMake(85.0, 85.0, 80.0, 80.0);
+                button.tag = index;
+                
+                UIImage *buttonImage = [UIImage imageNamed:@"Play.png"];
+                [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+                [button addTarget:self action:@selector(playAction:) forControlEvents:UIControlEventTouchUpInside];
+                [view addSubview:button];
+
+            }
+        }
+        
         
     }
     
@@ -171,6 +236,41 @@
     
     return view;
 }
+
+
+-(IBAction)playAction:(id)sender
+{
+    UIButton *btn = (UIButton *)sender;
+    int indexrow = btn.tag;
+    
+    webview=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320,600)];
+    NSString *url= [_images[indexrow] video_url];
+    NSURL *nsurl=[NSURL URLWithString:url];
+    NSURLRequest *nsrequest=[NSURLRequest requestWithURL:nsurl];
+    [webview loadRequest:nsrequest];
+    webview.tag = 5;
+    [self.view addSubview:webview];
+    
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(-5.0, 32.0, 55.0, 55.0);
+    
+    UIImage *buttonImage = [UIImage imageNamed:@"CloseWeb.png"];
+    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(closeWebview:) forControlEvents:UIControlEventTouchUpInside];
+    [webview addSubview:button];
+
+    
+  }
+
+-(IBAction)closeWebview:(id)sender
+{
+//    webview = (UIWebView*)[self.view viewWithTag:5];
+    webview.hidden = YES;
+    
+}
+
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -311,9 +411,9 @@
         
         if (_msgResponse.success == YES)
         {
-        [SVProgressHUD dismiss];
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _msgResponse.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+            [SVProgressHUD dismiss];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _msgResponse.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
         }
         
         else

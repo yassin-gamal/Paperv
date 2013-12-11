@@ -12,6 +12,8 @@
 
 #import "StoryDetailsModel.h"
 
+
+
 @interface StoryDetailsViewController : UITableViewController<iCarouselDataSource, UITextFieldDelegate>
 
 - (IBAction)closeStory:(id)sender;
@@ -41,5 +43,6 @@
 
 @property NSString *storyID;
 @property StoryDetailsModel *story;
+
 
 @end
