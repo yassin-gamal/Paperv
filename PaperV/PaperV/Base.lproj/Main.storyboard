@@ -245,6 +245,94 @@
             </objects>
             <point key="canvasLocation" x="241" y="-908"/>
         </scene>
+        <!--Text Side View Controller-->
+        <scene sceneID="jEO-U2-XGp">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" id="0yD-KO-fCD" customClass="TextSideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fqf-kU-kyh"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Ud-L2-X3x"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QDi-3Y-NxE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y2F-k6-3bZ">
+                                <rect key="frame" x="0.0" y="64" width="320" height="484"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">
+PaperV make your stories come to life with all your Photos, Video &amp; Audio in a single post, as simple as Glide n Slide. 
+
+What's our story? 
+
+We believe that everyone has a story to tell, and we are developing new and easier ways to share your stories. 
+
+We help people tell stories in a way that is more organized and easier to share. 
+
+That is who we are and what we do every single day. 
+
+That is PaperV. That is our story. What is yours? 
+
+Made in Bahrain with Love ❤</string>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="syi-h0-pBa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFl-nv-mYw">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOk-4o-i6l">
+                                        <rect key="frame" x="16" y="29" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Menu">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openSide:" destination="0yD-KO-fCD" eventType="touchUpInside" id="FVm-Ss-oIu"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6m-vs-s14">
+                                        <rect key="frame" x="121" y="33" width="78" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="Pcd-j1-oOX"/>
+                                    <constraint firstAttribute="width" constant="320" id="XEz-dY-E2x"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="zjY-5r-A3U"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="syi-h0-pBa" firstAttribute="top" secondItem="QDi-3Y-NxE" secondAttribute="top" id="VRc-3X-ngI"/>
+                            <constraint firstItem="syi-h0-pBa" firstAttribute="leading" secondItem="QDi-3Y-NxE" secondAttribute="leading" id="ssN-iI-xBs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="yFl-nv-mYw" id="4Ed-9r-6Zw"/>
+                        <outlet property="pageContent" destination="y2F-k6-3bZ" id="X6g-5M-f9W"/>
+                        <outlet property="pageTitle" destination="g6m-vs-s14" id="5et-tF-Tmq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="41s-3o-xLK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602" y="-2368"/>
+        </scene>
         <!--Side Menu View Controller-->
         <scene sceneID="PPv-9n-gij">
             <objects>
@@ -323,6 +411,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="openHome:" destination="HOG-5H-gcM" eventType="touchUpInside" id="rjF-Q7-dlU"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="SideHome" translatesAutoresizingMaskIntoConstraints="NO" id="zKn-r6-0Ym">
                                                     <rect key="frame" x="35" y="7" width="25" height="25"/>
@@ -389,6 +480,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="openAbout:" destination="HOG-5H-gcM" eventType="touchUpInside" id="ZY0-Oj-AyZ"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="About" translatesAutoresizingMaskIntoConstraints="NO" id="vpb-8V-8Ck">
                                                     <rect key="frame" x="35" y="7" width="25" height="25"/>
@@ -422,6 +516,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="openPrivacy:" destination="HOG-5H-gcM" eventType="touchUpInside" id="Wya-WV-b1R"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Privacy" translatesAutoresizingMaskIntoConstraints="NO" id="gaV-yT-0S2">
                                                     <rect key="frame" x="35" y="7" width="25" height="25"/>
@@ -455,6 +552,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="openTerms:" destination="HOG-5H-gcM" eventType="touchUpInside" id="fdU-Pq-B58"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Terms" translatesAutoresizingMaskIntoConstraints="NO" id="BJM-M2-gAB">
                                                     <rect key="frame" x="35" y="10" width="25" height="25"/>
@@ -488,6 +588,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="openContact:" destination="HOG-5H-gcM" eventType="touchUpInside" id="j7X-Q9-DOG"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Contact" translatesAutoresizingMaskIntoConstraints="NO" id="26k-w4-xwA">
                                                     <rect key="frame" x="35" y="7" width="25" height="25"/>
@@ -521,6 +624,9 @@
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="logout:" destination="HOG-5H-gcM" eventType="touchUpInside" id="9zu-UP-SZe"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logout" translatesAutoresizingMaskIntoConstraints="NO" id="pQ6-ak-l4m">
                                                     <rect key="frame" x="35" y="7" width="25" height="25"/>
@@ -551,11 +657,12 @@
                     </tableView>
                     <connections>
                         <outlet property="avatar" destination="aFY-qQ-sAW" id="qhX-mP-klm"/>
+                        <outlet property="userName" destination="r1e-Vj-voB" id="EFf-YM-bHZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKc-bC-Maz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="-2441"/>
+            <point key="canvasLocation" x="241" y="-1689"/>
         </scene>
         <!--Home Feed View Controller - Home-->
         <scene sceneID="f64-lu-Afz">
@@ -1961,6 +2068,7 @@
                     <connections>
                         <outlet property="myTableView" destination="8oI-LN-LyW" id="21g-2A-d6B"/>
                         <outlet property="profileAvatar" destination="ic3-Xn-Vuh" id="UpI-tq-3lo"/>
+                        <outlet property="profileName" destination="b5k-dL-eeK" id="5Lm-xJ-dqH"/>
                         <segue destination="g3z-iK-uts" kind="modal" identifier="StoryDetails" modalTransitionStyle="coverVertical" id="QAV-cp-1ag"/>
                     </connections>
                 </viewController>
@@ -2099,19 +2207,15 @@
                                 <rect key="frame" x="0.0" y="165" width="320" height="403"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWi-zu-0mn">
-                                        <rect key="frame" x="95" y="20" width="130" height="130"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="CameraBtn">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-tG-isb">
                                         <rect key="frame" x="110" y="146" width="100" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="TakeImageBtn" backgroundImage="TakeImageBtn">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="changeImage:" destination="Naw-rq-vpc" eventType="touchUpInside" id="5y1-wR-3TN"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Name" clearsOnBeginEditing="YES" minimumFontSize="17" background="LoginField" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-iK-YOF">
                                         <rect key="frame" x="20" y="203" width="280" height="42"/>
@@ -2149,6 +2253,10 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CameraBtn" translatesAutoresizingMaskIntoConstraints="NO" id="m83-pG-cyn">
+                                        <rect key="frame" x="100" y="20" width="120" height="120"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -2163,16 +2271,12 @@
                                     <constraint firstItem="bgT-iK-YOF" firstAttribute="centerX" secondItem="cgb-tG-isb" secondAttribute="centerX" id="KWf-z1-psr"/>
                                     <constraint firstAttribute="height" constant="403" id="Nye-88-X2T"/>
                                     <constraint firstItem="bgT-iK-YOF" firstAttribute="leading" secondItem="6kp-Zd-Z2M" secondAttribute="leading" constant="20" symbolic="YES" id="QSo-RO-49t"/>
-                                    <constraint firstItem="bgT-iK-YOF" firstAttribute="centerX" secondItem="MWi-zu-0mn" secondAttribute="centerX" id="Xii-d9-2FX"/>
                                     <constraint firstItem="bgT-iK-YOF" firstAttribute="top" secondItem="cgb-tG-isb" secondAttribute="bottom" constant="27" id="a9F-WT-QUt"/>
                                     <constraint firstItem="IXN-3w-wV0" firstAttribute="leading" secondItem="6kp-Zd-Z2M" secondAttribute="leading" constant="20" id="bw6-WS-p1K"/>
-                                    <constraint firstItem="MWi-zu-0mn" firstAttribute="top" secondItem="6kp-Zd-Z2M" secondAttribute="top" constant="20" symbolic="YES" id="hFj-lz-cBb"/>
                                     <constraint firstItem="bgT-iK-YOF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6kp-Zd-Z2M" secondAttribute="leading" constant="20" id="hOT-fy-F2f"/>
-                                    <constraint firstItem="bgT-iK-YOF" firstAttribute="top" secondItem="MWi-zu-0mn" secondAttribute="bottom" constant="53" id="lQW-oI-tTc"/>
                                     <constraint firstItem="bgT-iK-YOF" firstAttribute="leading" secondItem="4aU-Mp-TEc" secondAttribute="leading" id="mTZ-dt-3Gu"/>
                                     <constraint firstItem="4aU-Mp-TEc" firstAttribute="top" secondItem="IXN-3w-wV0" secondAttribute="bottom" constant="9" id="nkO-Ng-BQk"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="nlj-0Z-YMc"/>
-                                    <constraint firstItem="MWi-zu-0mn" firstAttribute="leading" secondItem="6kp-Zd-Z2M" secondAttribute="leading" constant="95" id="sub-vh-jpO"/>
                                     <constraint firstItem="4aU-Mp-TEc" firstAttribute="top" secondItem="IXN-3w-wV0" secondAttribute="bottom" constant="9" id="u1c-Wa-miV"/>
                                     <constraint firstItem="IXN-3w-wV0" firstAttribute="top" secondItem="bgT-iK-YOF" secondAttribute="bottom" constant="11" id="ysR-fR-Fke"/>
                                 </constraints>
@@ -2212,7 +2316,9 @@
                     <connections>
                         <outlet property="avatar" destination="lXE-av-cvv" id="L0j-a7-sHg"/>
                         <outlet property="emailField" destination="IXN-3w-wV0" id="lSH-Hg-46g"/>
+                        <outlet property="nextAvatar" destination="m83-pG-cyn" id="Uzf-y8-Lhw"/>
                         <outlet property="passwordField" destination="4aU-Mp-TEc" id="5Lm-IE-GAu"/>
+                        <outlet property="profileName" destination="ILK-xh-484" id="QJs-y0-uHV"/>
                         <outlet property="userNameField" destination="bgT-iK-YOF" id="j9M-I9-snX"/>
                     </connections>
                 </viewController>
@@ -2337,6 +2443,7 @@
                     <connections>
                         <outlet property="myTableView" destination="LR8-Yu-Iw1" id="cJC-o1-OFI"/>
                         <outlet property="profileAvatar" destination="AJz-wt-p4i" id="Idp-EZ-fyb"/>
+                        <outlet property="profileName" destination="zti-aL-zwB" id="YYB-tP-7EX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4U-2z-XDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2461,11 +2568,349 @@
                     <connections>
                         <outlet property="myTableView" destination="OTG-MQ-MSI" id="I4J-HD-F3h"/>
                         <outlet property="profileAvatar" destination="RlD-bz-XXC" id="5GB-bn-UnG"/>
+                        <outlet property="profileName" destination="XyM-Ty-PYF" id="La5-Nl-CNU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tsJ-rW-8fV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2310" y="1755"/>
+        </scene>
+        <!--Text Side View Controller-->
+        <scene sceneID="TXn-GN-c9K">
+            <objects>
+                <viewController storyboardIdentifier="PrivacyViewController" id="rdW-z4-Zby" customClass="TextSideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="taf-Rr-gcC"/>
+                        <viewControllerLayoutGuide type="bottom" id="t52-Hh-WCR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HhV-9I-Xia">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wIg-j7-lt1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="484"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">
+This Privacy Policy governs the manner in which PaperV collects, uses, maintains and discloses information collected from users (each, a "User") of the http://www.paperv.com website ("Site"). This privacy policy applies to the Site and all products and services offered by PaperV. 
+
+Personal identification information 
+
+We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, name, email address. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities. 
+
+Non-personal identification information 
+
+We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information. 
+
+Web browser cookies 
+
+Our Site may use "cookies" to enhance User experience. User's web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly. 
+
+How we use collected information 
+
+PaperV may collect and use Users personal information for the following purposes: 
+
+- To personalize user experience
+We may use information in the aggregate to understand how our Users as a group use the services and resources provided on our Site. 
+- To send periodic emails 
+If User decides to opt-in to our mailing list, they will receive emails that may include company news, updates, related product or service information, etc. If at any time the User would like to unsubscribe from receiving future emails, they may do so by contacting us via our Site. 
+
+How we protect your information 
+
+We adopt appropriate data collection, storage and processing practices and security measures to protect against unauthorized access, alteration, disclosure or destruction of your personal information, username, password, transaction information and data stored on our Site. 
+
+Sharing your personal information 
+
+We do not sell, trade, or rent Users personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above. 
+
+Advertising 
+
+Ads appearing on our site may be delivered to Users by advertising partners, who may set cookies. These cookies allow the ad server to recognize your computer each time they send you an online advertisement to compile non personal identification information about you or others who use your computer. This information allows ad networks to, among other things, deliver targeted advertisements that they believe will be of most interest to you. This privacy policy does not cover the use of cookies by any advertisers. 
+
+Changes to this privacy policy 
+
+PaperV has the discretion to update this privacy policy at any time. When we do, we will revise the updated date at the bottom of this page and send you an email. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications. 
+
+Your acceptance of these terms 
+
+By using this Site, you signify your acceptance of this policy and terms of service. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. 
+
+Contacting us 
+
+If you have any questions about this Privacy Policy, the practices of this site, or your dealings with this site, please contact us at: 
+PaperV 
+http://www.paperv.com 
+privacy@paperv.com 
+
+This document was last updated on April 02, 2013
+
+
+
+</mutableString>
+                                <color key="textColor" red="0.40000000596046448" green="0.40000000596046448" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOa-k9-ISa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EyP-G6-Gff">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gwi-ZG-vAq">
+                                        <rect key="frame" x="16" y="29" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Menu">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openSide:" destination="rdW-z4-Zby" eventType="touchUpInside" id="d2Y-2A-FWh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Privacy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKh-kF-LfT">
+                                        <rect key="frame" x="121" y="33" width="78" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="LIv-Zc-gRy"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="Om5-cG-t6l"/>
+                                    <constraint firstAttribute="width" constant="320" id="m7R-rT-DWC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xOa-k9-ISa" firstAttribute="leading" secondItem="HhV-9I-Xia" secondAttribute="leading" id="Juu-Fr-tb0"/>
+                            <constraint firstItem="xOa-k9-ISa" firstAttribute="top" secondItem="HhV-9I-Xia" secondAttribute="top" id="p2A-5L-SHg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="EyP-G6-Gff" id="h59-yc-wUf"/>
+                        <outlet property="pageContent" destination="wIg-j7-lt1" id="GIt-mj-sFu"/>
+                        <outlet property="pageTitle" destination="hKh-kF-LfT" id="O5a-4l-kja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rON-IC-seg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="-2368"/>
+        </scene>
+        <!--Text Side View Controller-->
+        <scene sceneID="vuo-gy-HFt">
+            <objects>
+                <viewController storyboardIdentifier="TermsViewController" id="rVv-5w-6fv" customClass="TextSideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JcO-gD-aGC"/>
+                        <viewControllerLayoutGuide type="bottom" id="aDe-wY-8BI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eHx-tV-auK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RGQ-gO-n4g">
+                                <rect key="frame" x="0.0" y="64" width="320" height="484"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <mutableString key="text">
+1. ACCEPTANCE OF TERMS 
+
+PaperV provides the end Users (the "User") with a main resource, PaperV (the "Service") is the service provider. When the User registers a membership at the Service, they agree to these terms and are bound by these terms (the "Terms" or "Terms of Service") as long as the User is registered at the Service. 
+
+2. REGISTRATION OBLIGATIONS 
+
+When registered at the Service, the User agrees to: (a) while registering, provide true, accurate, current, and complete information about yourself, mainly including e-mail address (the "Registration Data") and (b) maintain and promptly update the Registration Data to keep it true, accurate, current and complete. If the Registration Data is ever untrue, inaccurate, not current, or incomplete, PaperV has full grounds to suspend or terminate their account. 
+
+3. MEMBER ACCOUNT, PASSWORD AND SECURITY 
+
+A password is required for the Account upon completing the Service's registration process. Only the User who created the Account on the Service (the "User") is responsible for maintaining the confidentiality of the password and Account, and is fully responsible for all activities that occur under the said password or Account. The User agrees to (a) immediately notify PaperV of any unauthorized use of the User's password or Account or any other breach of security, and (b) ensure that the User exits from the User account ("Account") at the end of each session. The Service is in no way responsible for any unauthorized use of the Account. 
+
+4. FORBIDDEN CONTENT 
+
+The User understands that all information, data, text, software, music, sound, photographs, graphics, video, messages or other materials (the "Content"), whether publicly posted or privately transmitted, are the sole responsibility of the person from which such Content originated. This means that the User is entirely responsible for all Content transmitted via the Service. PaperV does not control the Content transmitted via the Service and, as such, does not guarantee the accuracy, integrity or quality of such Content. 
+
+
+The User agrees to NOT use the Service to: 
+1.upload, post, e-mail, transmit or otherwise make available any Content that is unlawful, harmful, threatening, abusive, harassing, tortuous, defamatory, vulgar, obscene, libelous, invasive of another's privacy, hateful, or racially, ethnically or otherwise objectionable; 
+2.impersonate any other User, unregistered visitors to the Service ("Guests") or Staff of the Service in any way; 
+3.manipulate others, including Guests, Users, the Staff via the Service; 
+4.upload, post, email, transmit, link to, or otherwise make available any copyrighted Content without the User/owner's consent/li> 
+5.upload, post, email, transmit, link to, or otherwise make available any unsolicited or unauthorized advertising; 
+6.upload, post, email, transmit, link to, or otherwise make available any pornography, nudity, or other "adult" content; 
+7.upload, post, email, transmit, link to, or otherwise make available any material that contains software viruses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications equipment; 
+8.upload, post, email, transmit, link to, or otherwise make available any illegal copies of software ("Warez"); 
+9.gambling or casino releated content; 
+10."stalk" or otherwise harass another; or collect or store personal data about other Users; 
+11.insult other Users or Guests any any way, shape, or form (to "Flame"); 
+12.cause (an)other User(s) or Guest(s) to react with a Flame (to "Troll"); 
+13.discriminate against someone because of their race, religion, or culture. 
+
+5. CONTENT RESPONSIBILITY 
+
+The User understands that all Content, whether publicly posted or privately transmitted, are the sole responsibility of the person from which such Content originated. This means that the User is entirely responsible for all Content transmitted via the Service. In NO WAY PaperV or the Service responsible for the Content transmitted. 
+
+6. TERMINATION OF ACCOUNTS
+
+PaperV has the right but not the obligation to terminate ANY account on the service if the said account has broken any part of these terms, no matter how minor. Termination of accounts is done on a case-by case basis and the specific member of the Staff of the Service determines the outcome of that particular Terms of Service violation. Each case is different, and each will be treated differently, on that member's sole discretion. 
+
+The User of the said Account on the Service is not required to be notified at any time before termination of the Account. However, in most cases, the User will be notified of the violation in hopes that the User will fix this violation. If no compliance is made, the Account will most likely be terminated. As said earlier, termination is done on a case-by-case basis, and for more severe cases, notification of the User will most likely not happen, and an action will be taken immediately. Additionally, the reason why the said account was terminated is not required to be given to the User, as the User should be aware of the violations that are occurring at the said Account. 
+
+7. MODIFICATION OF TERMS 
+
+PaperV reserves the right to modify these terms in any way at any time, without notification to any Users or unregistered Users (the "Guests"). 
+
+These Terms were last modified on Tuesday, April 2, 2013. Any revisions to these Terms were not applicable before that date. However, any revisions to these terms affect all current Users, and all Users must comply to any revisions as soon as possible. 
+
+8. VIOLATIONS 
+
+Please report any Terms of Service violations to violations@paperv.com 
+
+9. INQUIRIES 
+
+If there are any inquiries about these Terms, please send your inquiries to policy@paperv.com
+
+
+
+
+
+</mutableString>
+                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZU-oZ-gVG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-I6-VR8">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8g-hG-EbY">
+                                        <rect key="frame" x="16" y="29" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Menu">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openSide:" destination="rVv-5w-6fv" eventType="touchUpInside" id="7sC-2b-iAC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Terms" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdA-kL-6PC">
+                                        <rect key="frame" x="121" y="33" width="78" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="D8K-6g-sfL"/>
+                                    <constraint firstAttribute="width" constant="320" id="Fa0-Mp-3QT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="cZ0-RI-K9f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wZU-oZ-gVG" firstAttribute="top" secondItem="eHx-tV-auK" secondAttribute="top" id="IyN-Fx-XJe"/>
+                            <constraint firstItem="wZU-oZ-gVG" firstAttribute="leading" secondItem="eHx-tV-auK" secondAttribute="leading" id="PL9-rs-GJY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="header" destination="b4y-I6-VR8" id="Nk8-m2-NWt"/>
+                        <outlet property="pageContent" destination="RGQ-gO-n4g" id="wGu-3i-42L"/>
+                        <outlet property="pageTitle" destination="SdA-kL-6PC" id="MfE-wV-h22"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXu-PG-tWm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-131" y="-2368"/>
+        </scene>
+        <!--Text Side View Controller-->
+        <scene sceneID="5UI-oV-4wd">
+            <objects>
+                <viewController storyboardIdentifier="ContactViewController" id="wGZ-RI-eVo" customClass="TextSideViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MnL-SR-4Z6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Xos-iM-mF9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yzk-QU-Pt8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAl-U9-Glo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URY-19-3bO">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nu-wH-NUx">
+                                        <rect key="frame" x="16" y="29" width="32" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="Menu">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openSide:" destination="wGZ-RI-eVo" eventType="touchUpInside" id="14l-ZW-yxE"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact Us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKh-V4-Gaa">
+                                        <rect key="frame" x="121" y="33" width="108" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="STHeitiSC-Light" family="Heiti SC" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="BEA-A5-Q2U"/>
+                                    <constraint firstAttribute="height" constant="65" id="q5a-aD-Rht"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65" id="rfa-eC-IrE"/>
+                                </constraints>
+                            </view>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-ZG-bDg">
+                                <rect key="frame" x="0.0" y="68" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pAl-U9-Glo" firstAttribute="top" secondItem="yzk-QU-Pt8" secondAttribute="top" id="aEz-as-UTg"/>
+                            <constraint firstItem="pAl-U9-Glo" firstAttribute="leading" secondItem="yzk-QU-Pt8" secondAttribute="leading" id="svN-lq-nzn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactWebview" destination="ccz-ZG-bDg" id="skJ-Nz-EH3"/>
+                        <outlet property="header" destination="URY-19-3bO" id="dHH-Ev-oUl"/>
+                        <outlet property="pageTitle" destination="rKh-V4-Gaa" id="FVR-1T-k7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVT-z9-bWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-479" y="-2368"/>
         </scene>
     </scenes>
     <resources>

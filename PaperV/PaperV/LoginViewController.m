@@ -9,8 +9,14 @@
 #import "LoginViewController.h"
 #import "TabBarViewController.h"
 #import "TWTSideMenuViewController.h"
+#import "SVProgressHUD.h"
+#import "JSONModelLib.h"
+#import "UserModel.h"
 
 @interface LoginViewController ()
+{
+    UserModel *_user;
+}
 
 @end
 
@@ -41,6 +47,15 @@
     passwordField.secureTextEntry = YES;
     
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* userName = [defaults objectForKey:@"user_name"];
+    if (userName.length > 0) {
+        
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
+    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,9 +73,52 @@
 
 
 - (IBAction)login:(id)sender {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
+    if (![userNameField.text  isEqual: @""] && ![passwordField.text  isEqual: @""])
+    {
+        [SVProgressHUD showWithStatus:@"Logging In ..."];
+        
+        //fetch the feed
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/login.php?login=%@&password=%@", userNameField.text, passwordField.text];
+        _user = [[UserModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
+            
+            //json fetched
+            
+            [SVProgressHUD dismiss];
+            
+            if (_user.success) {
+                
+                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
+                
+                
+                // Store the data
+                NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+                [defaults setObject:_user.user_id forKey:@"user_id"];
+                [defaults setObject:_user.user_name forKey:@"user_name"];
+                [defaults setObject:_user.full_name forKey:@"full_name"];
+                [defaults setObject:_user.user_image forKey:@"user_image"];
+                [defaults setObject:_user.email forKey:@"email"];
+                [defaults synchronize];
+                
+            }
+            
+            else
+            {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: @"Error login data." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+            }
+            
+        }];
+        
+    }
+    
+    
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: @"Error login data." delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
+    }
+    
+    
 }
 @end
 

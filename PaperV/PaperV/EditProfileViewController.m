@@ -7,6 +7,7 @@
 //
 
 #import "EditProfileViewController.h"
+#import "AsyncImageView.h"
 
 @interface EditProfileViewController ()
 
@@ -18,6 +19,9 @@
 @synthesize emailField;
 @synthesize passwordField;
 @synthesize avatar;
+@synthesize profileName;
+@synthesize nextAvatar;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -53,10 +57,24 @@
     passwordField.leftViewMode = UITextFieldViewModeAlways;
     
     
-    UIImage *image = [UIImage imageNamed:@"Yehia"];
-    [avatar setImage:image];
-    avatar.layer.cornerRadius = avatar.frame.size.width / 2;
-    avatar.layer.masksToBounds = YES;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    profileName.text = [defaults objectForKey:@"full_name"];
+    
+    NSString *userImage = [defaults objectForKey:@"user_image"];
+    
+    //set avatar
+    if (![userImage  isEqual: @""])
+    {
+        avatar.imageURL = [NSURL URLWithString:userImage];
+        
+        avatar.layer.cornerRadius = avatar.frame.size.width / 2;
+        avatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        avatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+
     
 }
 
@@ -106,5 +124,29 @@
     self.view.frame = CGRectOffset(self.view.frame, 0, movement);
     [UIView commitAnimations];
 }
+
+- (IBAction)changeImage:(id)sender {
+    
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self presentModalViewController:picker animated:YES];
+}
+
+#pragma mark - Image Picker Delegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    nextAvatar.image = image;
+    nextAvatar.layer.cornerRadius = nextAvatar.frame.size.width / 2;
+    nextAvatar.layer.masksToBounds = YES;
+
+    [picker dismissModalViewControllerAnimated:YES];
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissModalViewControllerAnimated:YES];
+}
+
 
 @end

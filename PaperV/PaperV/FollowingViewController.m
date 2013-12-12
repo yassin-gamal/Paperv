@@ -19,6 +19,7 @@
 {
     FollowModel *_following;
     MessageResponseModel *_response;
+    NSString *user_id;
 }
 
 @end
@@ -28,6 +29,7 @@
 
 @synthesize myTableView;
 @synthesize profileAvatar;
+@synthesize profileName;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -46,15 +48,31 @@
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     
-    UIImage *image = [UIImage imageNamed:@"Yehia"];
-    [profileAvatar setImage:image];
-    profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;
-    profileAvatar.layer.masksToBounds = YES;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    user_id = [defaults objectForKey:@"user_id"];
+    profileName.text = [defaults objectForKey:@"full_name"];
+    
+    NSString *userImage = [defaults objectForKey:@"user_image"];
+    
+    //set avatar
+    if (![userImage  isEqual: @""])
+    {
+        profileAvatar.imageURL = [NSURL URLWithString:userImage];
+        
+        profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;
+        profileAvatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        profileAvatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+
+    
     
     [SVProgressHUD showWithStatus:@"Fetching Followers"];
     
     //fetch the feed
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_following.php?user_id=1106"];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_following.php?user_id=%@", user_id];
     _following = [[FollowModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         //json fetched
@@ -142,7 +160,7 @@
     [SVProgressHUD showWithStatus:msg];
     
     //fetch the feed
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/unfollow.php?user_id=1106&target_id=%@", friendData.user_id];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/unfollow.php?user_id=%@&target_id=%@", user_id, friendData.user_id];
     _response = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         if (_response.success == YES)

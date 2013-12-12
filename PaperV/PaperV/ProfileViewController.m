@@ -25,6 +25,7 @@
     FeedModel* _temp;
     
     StoryModel* _story;
+    NSString* user_id;
     
     NSInteger pageNumber;
 }
@@ -35,6 +36,7 @@
 
 @synthesize profileAvatar;
 @synthesize myTableView;
+@synthesize profileName;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -51,11 +53,24 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    profileName.text = [defaults objectForKey:@"full_name"];
     
-    UIImage *image = [UIImage imageNamed:@"Yehia"];
-    [profileAvatar setImage:image];
-    profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;
-    profileAvatar.layer.masksToBounds = YES;
+    NSString *userImage = [defaults objectForKey:@"user_image"];
+    
+    //set avatar
+    if (![userImage  isEqual: @""])
+    {
+        profileAvatar.imageURL = [NSURL URLWithString:userImage];
+        
+        profileAvatar.layer.cornerRadius = profileAvatar.frame.size.width / 2;
+        profileAvatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        profileAvatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+
     
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
@@ -64,8 +79,10 @@
     
     [SVProgressHUD showWithStatus:@"Fetching Stories"];
     
+    
+    user_id = [defaults objectForKey:@"user_id"];
     //fetch the feed
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_stories.php?user_id=1106&page=%d",pageNumber];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_stories.php?user_id=%@&page=%d", user_id, pageNumber];
     _feed = [[FeedModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         //json fetched
@@ -162,7 +179,7 @@
     
     [SVProgressHUD showWithStatus:@"Fetching Story"];
     
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/get_story_by_id.php?user_id=1106&story_id=%@", storyData.story_id];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/get_story_by_id.php?user_id=%@&story_id=%@", user_id, storyData.story_id];
     _story = [[StoryModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         if (!err) {
@@ -202,7 +219,7 @@
         [SVProgressHUD showWithStatus:@"Fetching More Stories"];
         
         pageNumber++;
-        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_stories.php?user_id=1106&page=%d",pageNumber];
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/user_stories.php?user_id=%@&page=%d", user_id, pageNumber];
         
         //fetch the feed
         _temp = [[FeedModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {

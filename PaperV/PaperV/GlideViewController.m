@@ -11,6 +11,7 @@
 #import "GlideModel.h"
 #import "CustomGlideCell.h"
 #import "ASIFormDataRequest.h"
+#import "AsyncImageView.h"
 
 
 
@@ -80,10 +81,22 @@
     //    [[self myScrollView] setContentSize:CGSizeMake(320, 800)];
     
     
-    UIImage *image = [UIImage imageNamed:@"Yehia"];
-    [avatar setImage:image];
-    avatar.layer.cornerRadius = avatar.frame.size.width / 2;
-    avatar.layer.masksToBounds = YES;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *userImage = [defaults objectForKey:@"user_image"];
+    
+    //set avatar
+    if (![userImage  isEqual: @""])
+    {
+        avatar.imageURL = [NSURL URLWithString:userImage];
+        
+        avatar.layer.cornerRadius = avatar.frame.size.width / 2;
+        avatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        avatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+
     
 }
 
@@ -408,8 +421,11 @@
         
         NSURL *url = [NSURL URLWithString:@"http://paperv.com/api/add_story.php"];
         
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *user_id = [defaults objectForKey:@"user_id"];
+        
         ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
-        [request setPostValue:@"1106" forKey:@"user_id"];
+        [request setPostValue:user_id forKey:@"user_id"];
         [request setPostValue:@"1" forKey:@"category_id"];
         [request setPostValue:storyTitleField.text forKey:@"title"];
         

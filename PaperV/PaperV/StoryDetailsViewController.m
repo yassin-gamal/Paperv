@@ -20,6 +20,9 @@
 {
     MessageResponseModel * _msgResponse;
     UIWebView *webview;
+    
+    NSUserDefaults *defaults;
+    NSString *user_id;
 }
 
 
@@ -68,6 +71,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    defaults = [NSUserDefaults standardUserDefaults];
+    user_id = [defaults objectForKey:@"user_id"];
     
     header.backgroundColor = [UIColor colorWithRed:81.0/255 green:196.0/255 blue:212.0/255 alpha:1.0];
     
@@ -406,7 +412,7 @@
     NSString *message = [NSString stringWithFormat:@"Following %@", story.user_fullname];
     [SVProgressHUD showWithStatus:message];
     
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/follow.php?user_id=1106&target_id=%@", story.user_id];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/follow.php?user_id=%@&target_id=%@", user_id, story.user_id];
     _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         if (_msgResponse.success == YES)
@@ -435,7 +441,7 @@
     
     if (! story.is_liked)
     {
-        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/like.php?user_id=1106&type_id=story&item_id=%@", story.story_id];
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/like.php?user_id=%@&type_id=story&item_id=%@", user_id, story.story_id];
         _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
             
             if (_msgResponse.success == YES)
@@ -451,7 +457,7 @@
 
 - (IBAction)reglideStory:(id)sender {
     
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/reglide.php?user_id=1106&story_id=%@", story.story_id];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/reglide.php?user_id=%@&story_id=%@", user_id, story.story_id];
     _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _msgResponse.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
@@ -475,7 +481,7 @@
         NSString *comment = [commentField.text stringByReplacingOccurrencesOfString:@" "
                                                                          withString:@"%20"];
         
-        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/add_comment.php?user_id=1106&story_id=%@&comment=%@", story.story_id, comment];
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/add_comment.php?user_id=%@&story_id=%@&comment=%@", user_id, story.story_id, comment];
         _msgResponse = [[MessageResponseModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
             
             //            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"PaperV" message: _follow.msg delegate: nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alert show];
@@ -486,9 +492,9 @@
                 totalComment.text = [NSString stringWithFormat:@"%d", commentCounter];
                 
                 CommentModel *commentModel = [[CommentModel alloc] init];
-                commentModel.user_fullname = @"Yehia Elsaka";
-                commentModel.user_image = @"";
-                commentModel.user_id = @"1106";
+                commentModel.user_fullname = [defaults objectForKey:@"full_name"];
+                commentModel.user_image = [defaults objectForKey:@"user_image"];
+                commentModel.user_id = user_id;
                 commentModel.user_comment = commentField.text;
                 
                 [story.comments addObject:commentModel];

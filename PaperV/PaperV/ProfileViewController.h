@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
+@property (strong, nonatomic) IBOutlet UILabel *profileName;
+
+
 - (IBAction)openSide:(id)sender;
 
 @end

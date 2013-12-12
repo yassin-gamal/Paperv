@@ -15,5 +15,6 @@
 
 - (IBAction)closeFollowers:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UILabel *profileName;
 
 @end

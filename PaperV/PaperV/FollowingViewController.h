@@ -12,5 +12,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *profileAvatar;
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 - (IBAction)closeFollowing:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *profileName;
 
 @end

@@ -7,14 +7,21 @@
 //
 
 #import "SideMenuViewController.h"
+#import "AsyncImageView.h"
+#import "TabBarViewController.h"
+#import "TWTSideMenuViewController.h"
 
 @interface SideMenuViewController ()
+{
+    UIStoryboard *storyboard;
+}
 
 @end
 
 @implementation SideMenuViewController
 
 @synthesize avatar;
+@synthesize userName;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,13 +36,29 @@
 {
     [super viewDidLoad];
     
+    storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"SideMenuBackground"]]];
     
     
-    UIImage *image = [UIImage imageNamed:@"Yehia"];
-    [avatar setImage:image];
-    avatar.layer.cornerRadius = avatar.frame.size.width / 2;
-    avatar.layer.masksToBounds = YES;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    userName.text = [defaults objectForKey:@"full_name"];
+    
+    NSString *userImage = [defaults objectForKey:@"user_image"];
+    
+    //set avatar
+    if (![userImage  isEqual: @""])
+    {
+        avatar.imageURL = [NSURL URLWithString:userImage];
+        
+        avatar.layer.cornerRadius = avatar.frame.size.width / 2;
+        avatar.layer.masksToBounds = YES;
+    }
+    else
+    {
+        avatar.image = [UIImage imageNamed:@"Avatar.png"];
+    }
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -133,4 +156,39 @@
 
  */
 
+- (IBAction)openHome:(id)sender {
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TabViewController"] animated:YES closeMenu:YES];
+}
+
+- (IBAction)openAbout:(id)sender {
+    
+       [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"AboutViewController"] animated:YES closeMenu:YES];
+    
+}
+
+- (IBAction)openPrivacy:(id)sender {
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"PrivacyViewController"] animated:YES closeMenu:YES];
+}
+
+- (IBAction)openTerms:(id)sender {
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"TermsViewController"] animated:YES closeMenu:YES];
+}
+
+- (IBAction)openContact:(id)sender {
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"ContactViewController"] animated:YES closeMenu:YES];
+}
+
+- (IBAction)logout:(id)sender {
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"" forKey:@"user_name"];
+    [defaults synchronize];
+    
+    [self.sideMenuViewController setMainViewController:[storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"] animated:YES closeMenu:YES];
+    
+}
 @end

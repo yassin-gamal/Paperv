@@ -19,6 +19,7 @@
 		043BAE091840D1470028E6FF /* FollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE081840D1470028E6FF /* FollowersViewController.m */; };
 		043BAE0C1840D18A0028E6FF /* CustomCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0B1840D18A0028E6FF /* CustomCommentCell.m */; };
 		043BAE0F1840D73C0028E6FF /* FollowingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043BAE0E1840D73C0028E6FF /* FollowingViewController.m */; };
+		044A66A81859DE63002F8A9D /* TextSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044A66A71859DE63002F8A9D /* TextSideViewController.m */; };
 		046676EE184E545300755F14 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676D7184E545300755F14 /* JSONModel.m */; };
 		046676EF184E545300755F14 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676D9184E545300755F14 /* JSONModelArray.m */; };
 		046676F0184E545300755F14 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 046676DB184E545300755F14 /* JSONModelClassProperty.m */; };
@@ -66,6 +67,7 @@
 		04A765581856333D00DA718D /* CustomGlideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A765571856333D00DA718D /* CustomGlideCell.m */; };
 		04A76ED51840984F00145914 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED41840984F00145914 /* ProfileViewController.m */; };
 		04A76ED8184098A900145914 /* GlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A76ED7184098A900145914 /* GlideViewController.m */; };
+		04A7BC4F1859BF3E00145A69 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A7BC4E1859BF3E00145A69 /* UserModel.m */; };
 		04A8C0C91847849E0052CA07 /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0C81847849E0052CA07 /* iCarousel.m */; };
 		04A8C0E6184785A80052CA07 /* FXImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0E3184785A80052CA07 /* FXImageView.m */; };
 		04A8C0E7184785A80052CA07 /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A8C0E5184785A80052CA07 /* UIImage+FX.m */; };
@@ -134,6 +136,8 @@
 		043BAE0B1840D18A0028E6FF /* CustomCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCommentCell.m; sourceTree = "<group>"; };
 		043BAE0D1840D73C0028E6FF /* FollowingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowingViewController.h; sourceTree = "<group>"; };
 		043BAE0E1840D73C0028E6FF /* FollowingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowingViewController.m; sourceTree = "<group>"; };
+		044A66A61859DE63002F8A9D /* TextSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSideViewController.h; sourceTree = "<group>"; };
+		044A66A71859DE63002F8A9D /* TextSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextSideViewController.m; sourceTree = "<group>"; };
 		046676D6184E545300755F14 /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
 		046676D7184E545300755F14 /* JSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONModel.m; sourceTree = "<group>"; };
 		046676D8184E545300755F14 /* JSONModelArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModelArray.h; sourceTree = "<group>"; };
@@ -223,6 +227,8 @@
 		04A76ED41840984F00145914 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		04A76ED6184098A900145914 /* GlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlideViewController.h; sourceTree = "<group>"; };
 		04A76ED7184098A900145914 /* GlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlideViewController.m; sourceTree = "<group>"; };
+		04A7BC4D1859BF3E00145A69 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		04A7BC4E1859BF3E00145A69 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		04A8C0C71847849E0052CA07 /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
 		04A8C0C81847849E0052CA07 /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		04A8C0E2184785A80052CA07 /* FXImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXImageView.h; sourceTree = "<group>"; };
@@ -496,6 +502,8 @@
 			children = (
 				04A11C3018457602004091B7 /* SideMenuViewController.h */,
 				04A11C3118457602004091B7 /* SideMenuViewController.m */,
+				044A66A61859DE63002F8A9D /* TextSideViewController.h */,
+				044A66A71859DE63002F8A9D /* TextSideViewController.m */,
 			);
 			name = SideMenuControllers;
 			sourceTree = "<group>";
@@ -623,6 +631,8 @@
 				0483E2FA18532E2F006856C1 /* MessageResponseModel.m */,
 				04A76553185632C800DA718D /* GlideModel.h */,
 				04A76554185632C800DA718D /* GlideModel.m */,
+				04A7BC4D1859BF3E00145A69 /* UserModel.h */,
+				04A7BC4E1859BF3E00145A69 /* UserModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -871,6 +881,7 @@
 				046676F3184E545300755F14 /* JSONAPI.m in Sources */,
 				04A8C0E7184785A80052CA07 /* UIImage+FX.m in Sources */,
 				04A7318B1851F93A009DB430 /* StoryModel.m in Sources */,
+				044A66A81859DE63002F8A9D /* TextSideViewController.m in Sources */,
 				046676F4184E545300755F14 /* JSONHTTPClient.m in Sources */,
 				04A636A21844EBB600480D5A /* TWTSideMenuViewController.m in Sources */,
 				04A636AB1844EF0B00480D5A /* SideMenuView.m in Sources */,
@@ -897,6 +908,7 @@
 				04A731881851E8B3009DB430 /* StoryDetailsModel.m in Sources */,
 				04250391185878680080B437 /* ASIHTTPRequest.m in Sources */,
 				04A764FE1855C0C900DA718D /* FriendModel.m in Sources */,
+				04A7BC4F1859BF3E00145A69 /* UserModel.m in Sources */,
 				04A765041855C3DC00DA718D /* CustomFollowCell.m in Sources */,
 				04FE6A7A183D5502008789C8 /* RegisterViewController.m in Sources */,
 				04A765581856333D00DA718D /* CustomGlideCell.m in Sources */,

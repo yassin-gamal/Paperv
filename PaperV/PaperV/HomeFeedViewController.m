@@ -25,6 +25,7 @@
     FeedModel* _temp;
     
     StoryModel* _story;
+    NSString* user_id;
 
     NSInteger pageNumber;
 }
@@ -52,8 +53,12 @@
     
     [SVProgressHUD showWithStatus:@"Fetching Stories"];
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    user_id = [defaults objectForKey:@"user_id"];
+
+    
     //fetch the feed
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/home.php?user_id=1106&page=%ld",(long)pageNumber];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/home.php?user_id=%@&page=%ld", user_id, (long)pageNumber];
     _feed = [[FeedModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         //json fetched
@@ -151,7 +156,7 @@
     
     [SVProgressHUD showWithStatus:@"Fetching Story"];
     
-    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/get_story_by_id.php?user_id=1106&story_id=%@", storyData.story_id];
+    NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/get_story_by_id.php?user_id=%@&story_id=%@", user_id, storyData.story_id];
     _story = [[StoryModel alloc] initFromURLWithString:url completion:^(JSONModel *model, JSONModelError *err) {
         
         if (!err) {
@@ -188,7 +193,7 @@
         
         
         pageNumber++;
-        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/home.php?user_id=1106&page=%ld",(long)pageNumber];
+        NSString *url = [NSString stringWithFormat:@"http://paperv.com/api/home.php?user_id=%@&page=%ld",user_id, (long)pageNumber];
         
         
         [SVProgressHUD showWithStatus:@"Fetching More Stories"];

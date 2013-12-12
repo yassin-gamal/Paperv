@@ -11,4 +11,15 @@
 @interface SideMenuViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *avatar;
+
+@property (strong, nonatomic) IBOutlet UILabel *userName;
+
+- (IBAction)openHome:(id)sender;
+- (IBAction)openAbout:(id)sender;
+- (IBAction)openPrivacy:(id)sender;
+- (IBAction)openTerms:(id)sender;
+
+- (IBAction)openContact:(id)sender;
+- (IBAction)logout:(id)sender;
+
 @end
